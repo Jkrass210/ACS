@@ -1,0 +1,162 @@
+<header class="header-alert">
+  <div class="header-alert__line-top">
+    <div class="container">
+      <div class="header-alert__line-top-wrapper">
+        <div class="header-alert__box-form-city">
+          <a href="#" class="header-alert__link-city">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#local"></use>
+            </svg>
+            <span>
+              Москва
+            </span>
+          </a>
+        </div>
+        <div class="header-alert__box-nav">
+          <nav class="header-alert__nav">
+            <ul class="header-alert__list">
+              <li>
+                <a href="#">Для физлиц</a>
+              </li>
+              <li>
+                <a href="#">Для юрлиц</a>
+              </li>
+              <li>
+                <a href="#">Для поставщиков</a>
+              </li>
+              <li>
+                <a href="#">Доставка и оплата</a>
+              </li>
+              <li>
+                <a href="#">О нас</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-alert__box-connect">
+          <a href="tel:+78003333394" class="header-alert__link phone">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <span>
+              8 (800) 333-33-94
+            </span>
+          </a>
+          @@include('./box-call.html')
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-alert__line-bottom">
+    <div class="container">
+      <div class="header-alert__line-bottom-wrapper">
+        <div class="header-alert__left-wrapper">
+          <a href="/" class="header-alert__box-logo">
+            <svg width="54" height="21" viewBox="0 0 54 21" fill="none">
+              <use xlink:href="img/sprite.svg#acs"></use>
+            </svg>
+            <span class="header-alert__desc-logo">
+              <span>Бытовая и промышленная</span>
+              <span>инженераня сантехника</span>
+            </span>
+          </a>
+          <div class="header-alert__box-btn-catalog">
+            <a href="/catalog/" class="btn-catalog btn-reset">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#catalogBtn"></use>
+              </svg>
+              <span>
+                Каталог
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="header-alert__centre-wrapper">
+          <div class="search-alert">
+            <form class="search-alert__form" accept="#">
+              <input type="search" placeholder="Поиск по артикулу или названию">
+              <button class="search-alert__btn btn-reset">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#searchBtn"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="header-alert__right-wrapper">
+          <ul class="btn-group list-reset">
+            <li>
+              <a href="#" class="btn-group__link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#favourites"></use>
+                </svg>
+                <span class="text">Избранное</span>
+                <span class="counter">2</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn-group__link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#comparison"></use>
+                </svg>
+                <span class="text">Сравнение</span>
+                <span class="counter">10</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn-group__link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <use xlink:href="img/sprite.svg#basket"></use>
+                </svg>
+                <span class="text">Корзина</span>
+                <span class="counter">5</span>
+              </a>
+            </li>
+          </ul>
+          <div class="box-login">
+            <a href="#" class="box-login__btn">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#login"></use>
+              </svg>
+              <span class="text">Войти</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-alert__line-last">
+    <div class="container">
+      <div class="header-alert__line-last-wrapper">
+        <nav class="header-alert__nav-last">
+          <ul class="header-alert__list-last list-reset">
+            <li>
+              <a href="#" class="link-last-nav">Акции</a>
+            </li>
+            <li>
+              @@include('../components/drop-down-1.html',{"link":"Покупателям"})
+            </li>
+            <li>
+              @@include('../components/drop-down-1.html',{"link":"О компании"})
+            </li>
+            <li>
+              <a href="#" class="link-last-nav">Комплексные решения</a>
+            </li>
+            <li>
+              <a href="#" class="link-last-nav">Производители</a>
+            </li>
+            <li>
+              <a href="#" class="link-last-nav">Контакты</a>
+            </li>
+            <li>
+              <a href="#" class="link-last-nav">Отзывы</a>
+            </li>
+            <li>
+              <a href="#" class="link-last-nav">Оплата и доставка</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

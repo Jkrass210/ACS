@@ -1,0 +1,35 @@
+.btn-item-group {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      &__like {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--card-collor-hover);
+        &.active {
+          color: var(--link-catalog-hover);
+        }
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+        &:focus-visible,&:hover,&:active {
+          color: var(--link-catalog-hover);
+        }
+      }
+      &__compare {
+        cursor: pointer;
+        svg {
+          color: var(--card-collor-hover);
+          transition: color 0.4s ease-in-out;
+        }
+        &-input:checked {
+          & + svg {
+            color: var(--link-catalog-hover);
+          }
+        }
+      }
+    }

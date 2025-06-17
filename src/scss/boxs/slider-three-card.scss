@@ -1,0 +1,44 @@
+.slider-three-card {
+  padding-right: 12px;
+  .slick-track {
+    gap: 0px !important;
+  }
+  &__slide {
+    padding-right: 20px;
+    height: auto;
+  }
+  .slick-next:before, .slick-prev:before {
+    width: 64px !important;
+    height: 64px !important;
+    background-position: center;
+    background-color: var(--color-white);
+    border-radius: 100%;
+    background-size: 24px 24px;
+    bottom: -22px;
+    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+  }
+  .slick-next {
+    right: 0;
+    top: 35%;
+    transform: translate(0);
+  }
+  .slick-next:before {
+    right: 0;
+    background-image: url(../img/arrow-right.svg);
+  }
+  .slick-prev {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 35%;
+    transform: translate(0);
+  }
+  .slick-prev:before {
+    right: 0;
+    background-image: url(../img/arrow-left.svg);
+  }
+  .slick-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,31 @@
+.btn-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  &__line {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    transform-origin: center;
+    height: 2px;
+    background-color: #000;
+    transition: background-color 0.4s ease-in-out;
+    &:first-child {
+      transform: rotate(45deg);
+    }
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+  &:focus, &:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover,&:active {
+    .btn-close__line {
+      background-color: var(--link-catalog);
+    }
+  }
+}

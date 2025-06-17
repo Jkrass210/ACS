@@ -1,0 +1,96 @@
+.modal {
+  position: relative;
+  padding: 25px;
+  background-color: #fff;
+  &-wrapper {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(2, 6, 33, .75);
+    &.active {
+      display: flex;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 93%;
+    color: #000;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &.none {
+      display: none;
+    }
+  }
+  &__input {
+    padding: 10px;
+    border: 1px solid #c2c2c2;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 93%;
+    color: #000;
+  }
+  &__textarea {
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #c2c2c2;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 93%;
+    color: #000;
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.35);
+    }
+  }
+  &__submit {
+    padding: 20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 93%;
+    color: #fff;
+    background-color: var(--link-catalog);
+    transition: background-color 0.4s ease-in-out;
+    &.disabled {
+      color: #fff;
+      opacity: 0.7;
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--link-catalog-hover);
+    }
+  }
+  &__message {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    &.none {
+      display: none;
+    }
+    p {
+      text-align: center;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 93%;
+      color: #000;
+    }
+  }
+}

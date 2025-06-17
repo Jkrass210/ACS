@@ -1,0 +1,67 @@
+.box-payment-order {
+  &__content-wrapper {
+    padding: 61px 30px 30px 328px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: url(../img/payment-order/1.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom left;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 27px 0 0 0;
+      z-index: -2;
+      background-color: var(--link-catalog-hover);
+    }
+  }
+  &__content {
+    position: relative;
+    max-width: 725px;
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--color-white);
+  }
+  &__desc-top {
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-white);
+  }
+  &__form {
+    margin-bottom: 20px;
+  }
+  &__list {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      flex: 1;
+      &:last-child {
+        flex: 0.8;
+        .slide-content__link {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__desc-bottom {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

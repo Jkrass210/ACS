@@ -1,0 +1,21 @@
+.box-star {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  .star {
+    &-label {
+      display: flex;
+      cursor: pointer;
+    }
+    &_input:checked {
+      & + .star-castom {
+        color: #ff9e00;
+      }
+    }
+    &-castom {
+      display: flex;
+      color: var(--color-gray);
+    }
+  }
+}

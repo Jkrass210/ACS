@@ -1,0 +1,13 @@
+.box-certificates {
+  &__title {
+    margin-bottom: 0;
+  }
+  &__title-line {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .box-news__link-all {
+    display: none;
+  }
+}

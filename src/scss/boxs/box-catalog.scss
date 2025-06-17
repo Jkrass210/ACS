@@ -1,0 +1,99 @@
+.box-catalog {
+  &__content {
+    display: flex;
+    gap: 40px;
+  }
+  .box-left {
+    width: calc(288 / 1280 * 100%);
+  }
+  &__list-wrapper {
+    flex: 1;
+  }
+  &__list {
+    display: grid;
+    gap: 7px;
+    &.vertical {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &.horizontal {
+      grid-template-columns: 1fr;
+
+
+      .card-product {
+        display: grid;
+        grid-template-columns: 1fr calc(356 / 952 * 100%);
+        .box-img {
+          grid-row: 1 / 3;
+          &::before {
+            padding-top: 73%;
+          }
+        }
+        &__top {
+          padding: 10px 0 10px 10px;
+          display: grid;
+          gap: 10px;
+          grid-template-columns: 1fr calc(346 / 566 * 100%);
+        }
+        &__wrapper-name {
+          justify-content: space-between;
+        }
+        &__wrapper-type {
+          padding: 0;
+          grid-column: 2;
+          grid-row: 2;
+        }
+        &__bottom {
+          position: relative;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 12px;
+          .left-info {
+            display: block;
+            p {
+              padding: 10px 10px 0 10px;
+              display: inline-block;
+              margin-bottom: 8px;
+            }
+            .box-price-sale {
+              padding: 0 10px 0 10px;
+            }
+          }
+          .right-info {
+            padding: 0 10px 10px 10px;
+            .link-basket {
+              max-width: 264px;
+              width: 100%;
+              min-width: 36px;
+              height: auto;
+              border-radius: 0;
+              display: flex;
+              justify-content: start;
+              .svg {
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--link-catalog);
+              }
+              .text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 16px;
+                color: var(--color-white);
+              }
+            }
+          }
+          .btn-item-group {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

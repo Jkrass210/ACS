@@ -1,0 +1,29 @@
+.box-offers {
+  background-color: var(--color-link);
+  &__wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+    max-width: 1440px;
+    background-image: url(../img/box-offers/bacground.png), url(../img/box-offers/bottom-line.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, bottom left;
+    background-size: contain ,contain;
+  }
+  &__content-wrapper {
+    display: flex;
+    gap: 15px;
+  }
+  &__left {
+    width: calc(255 / 1280 * 100%);
+  }
+  &__title {
+    letter-spacing: -0.03em;
+    color: var(--color-white);
+    word-wrap: break-word; /* Старый вариант */
+    overflow-wrap: break-word; /* Современный вариант */
+  }
+  &__right {
+    width: calc(1010 / 1280 * 100%);
+  }
+}

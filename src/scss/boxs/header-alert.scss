@@ -1,0 +1,128 @@
+.header-alert {
+  &__line-top {
+    padding: 12px 0;
+  }
+  &__line-top-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__link-city {
+    display: flex;
+    gap: 7px;
+    align-items: end;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 93%;
+    color: var(--black-color);
+    transition: color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:hover {
+      color: var(--link-hover-color);
+    }
+  }
+  &__box-nav {
+    display: flex;
+    align-items: center;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    display: flex;
+    gap: clamp(5px, 2vw, 40px);
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 93%;
+        color: var(--black-color);
+        transition: color 0.4s ease-in-out;
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+        &:hover {
+          color: var(--link-hover-color);
+        }
+      }
+    }
+  }
+  &__box-connect {
+    display: flex;
+    align-items: center;
+    gap: clamp(5px, 2vw, 25px);
+  }
+  &__link {
+    &.phone {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 81%;
+      color: #000;
+    }
+  }
+  &__line-bottom {
+    padding: 11px 0 34px 0;
+    border-bottom: 1px solid var(--border-search);
+  }
+  &__line-bottom-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__left-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(5px, 2vw, 22px);
+  }
+  &__box-logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  &__desc-logo {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 108%;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  &__box-btn-catalog {
+    display: flex;
+  }
+  &__centre-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 24px 0 20px;
+  }
+  &__right-wrapper {
+    display: flex;
+    align-items: center;
+    gap: clamp(5px, 2vw, 32px);
+  }
+  &__line-last {
+    padding: 24px 0;
+  }
+  &__list-last {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(5px, 2vw, 24px);
+  }
+}

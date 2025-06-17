@@ -1,0 +1,38 @@
+.checkbox-1 {
+  display: flex;
+  justify-content: end;
+  &__label {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &__input:checked {
+    & + .checkbox-1__carstom {
+      justify-content: end;
+    }
+  }
+  &__carstom {
+    padding: 2px;
+    width: 53px;
+    height: 26px;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: start;
+    i {
+      display: inline-block;
+      border-radius: 100%;
+      width: 22px;
+      min-width: 22px;
+      height: 22px;
+      background-color: var(--color-white);
+    }
+  }
+  .text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-white);
+  }
+}

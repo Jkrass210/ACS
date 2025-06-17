@@ -1,0 +1,39 @@
+.box-selection {
+  &__content {
+    position: relative;
+    padding: 40px;
+    background-color: var(--link-catalog-hover);
+    img {
+      position: absolute;
+      inset: 0 0 0 auto;
+      z-index: 0;
+      height: 100%;
+    }
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+    color: var(--color-white);
+  }
+  &__form {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: end;
+  }
+  &__form-list {
+    display: flex;
+    gap: clamp(5px, 2vw, 16px);
+    li {
+      flex: 1;
+      &:last-child {
+        flex: 0.7;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

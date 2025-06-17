@@ -1,0 +1,22 @@
+.box-login {
+  display: flex;
+  align-items: center;
+  &__btn {
+    padding: 11px 24px;
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    background-color: var(--line-top-color);
+    transition: background-color 0.4s ease-in-out;
+    .text {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 93%;
+      color: var(--black-color);
+    }
+    &:hover,&:active,&:focus-visible {
+      background-color: var(--border-search);
+    }
+  }
+}

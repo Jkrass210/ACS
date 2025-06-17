@@ -1,0 +1,176 @@
+.footer-alert {
+  padding-bottom: 64px;
+  background-color: var(--color-link);
+  &-logo-under-desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-white);
+  }
+  &__wrapper {
+    padding-top: 106px;
+    margin: 0 auto;
+    max-width: 1360px;
+    background-image: url(../img/footer/background.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  &__left {
+    display: flex;
+    width: calc(720 / 1280 * 100%);
+    justify-content: space-between;
+    gap: 30px;
+    .box-left-1 {
+      max-width: 245px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      &__desc {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        color: #929db0;
+      }
+    }
+    .box-right-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      &__list-top {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 1fr;
+        li:first-child {
+          grid-column: span 2;
+        }
+        
+      }
+      &__link {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--color-white);
+        transition: color 0.4s ease-in-out;
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+        &:focus-visible,&:hover,&:active {
+          color: var(--card-collor-hover);
+        }
+      }
+      &__desc {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        color: #929db0;
+      }
+      &__list-bottom {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+        .network-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 54px;
+          min-width: 54px;
+          height: 54px;
+          border-radius: 100%;
+          background-color: rgba(255, 255, 255, 0.1);
+          transition: background-color 0.4s ease-in-out;
+          &:focus,&:focus-visible {
+            outline: none;
+          }
+          &:focus-visible,&:hover,&:active {
+            background-color: rgba(255, 255, 255, 0.078);
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+  &__right {
+    justify-content: space-between;
+    display: flex;
+    gap: 30px;
+    width: calc(456 / 1280 * 100%);
+    .box-left-2 {
+      &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        a {
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 16px;
+          color: var(--color-white);
+          &:focus,&:focus-visible {
+            outline: none;
+          }
+          &:focus-visible,&:hover,&:active {
+            color: var(--card-collor-hover);
+          }
+        }
+      }
+    }
+    .box-right-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      &__top {
+        .box-reviews__link {
+          background-color: rgba(255, 255, 255, 0.05);
+          .box-top {
+            .text {
+              color: var(--color-white);
+            }
+          }
+          .box-bottom {
+            color: var(--color-white);
+          }
+        }
+      }
+      &__bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      &__desc {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        color: #929db0;
+      }
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        flex-wrap: wrap;
+        li {
+          display: flex;
+          picture {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

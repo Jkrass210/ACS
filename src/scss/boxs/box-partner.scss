@@ -1,0 +1,30 @@
+.box-partner {
+  &__content {
+    min-height: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    background-image: url(../img/box-partner/background/1.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  &__left {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+  }
+  &__desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-gray);
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

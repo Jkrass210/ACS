@@ -1,0 +1,22 @@
+.box-question-answer {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .box-left {
+    max-width: 330px;
+    &__desc {
+      margin-bottom: 30px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--color-gray);
+    }
+  }
+  .box-right {
+    width: calc(820 / 1280 * 100%);
+  }
+
+  
+}

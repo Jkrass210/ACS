@@ -1,0 +1,17 @@
+.box-ack-form {
+  display: flex;
+  &__btn {
+    padding: 21px 24px;
+    background-color: var(--link-catalog-hover);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-white);
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--link-catalog);
+    }
+  }
+}

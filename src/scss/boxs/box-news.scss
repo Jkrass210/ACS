@@ -1,0 +1,30 @@
+.box-news {
+  &__title {
+    margin-bottom: 0;
+  }
+  &__title-line {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link-all {
+    display: flex;
+    align-items: end;
+    padding-right: 30px;
+    background-image: url(../img/box-news/arrow-up.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-link);
+    transition: color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--link-hover-color);
+
+    }
+  }
+}

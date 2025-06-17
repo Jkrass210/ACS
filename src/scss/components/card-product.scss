@@ -1,0 +1,275 @@
+.card-product {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: var(--color-white);
+
+  &__top {
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-img {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 95%;
+    }
+
+    &__link {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .img {
+        max-width: 90%;
+        max-height: 200px;
+        transition: transform 0.4s ease-in-out;
+      }
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+      &:focus-visible,&:hover,&:active {
+        .img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .marker-group {
+      position: absolute;
+      left: 11px;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 15px;
+      row-gap: 5px;
+      top: 0;
+      span {
+        display: inline-block;
+        position: relative;
+        padding: 7px 6px;
+        background-color: var(--link-catalog-hover);
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        color: var(--color-white);
+        &::before {
+          display: inline-block;
+          content: "";
+          border-top: 28px solid transparent;
+          border-right: 11px solid var(--link-catalog-hover);
+          position: absolute;
+          left: -11px;
+          top: 0;
+          height: 100%;
+        }
+        &::after {
+          display: inline-block;
+          content: "";
+          border-bottom: 28px solid transparent;
+          border-left: 11px solid var(--link-catalog-hover);
+          position: absolute;
+          right: -11px;
+          top: 0;
+          height: 100%;
+        }
+      }
+    }
+    /*.btn-item-group {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      &__like {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--card-collor-hover);
+        &.active {
+          color: var(--link-catalog-hover);
+        }
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+        &:focus-visible,&:hover,&:active {
+          color: var(--link-catalog-hover);
+        }
+      }
+      &__compare {
+        cursor: pointer;
+        svg {
+          color: var(--card-collor-hover);
+          transition: color 0.4s ease-in-out;
+        }
+        &-input:checked {
+          & + svg {
+            color: var(--link-catalog-hover);
+          }
+        }
+      }
+    }*/
+  }
+
+  &__wrapper-name {
+    display: flex;
+    flex-direction: column;
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 14px;
+      color: var(--color-gray);
+    }
+  }
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    a {
+      width: 100%;
+      color: var(--color-link);
+      display: -webkit-box;          /* Включаем флексбокс для старых браузеров */
+      -webkit-line-clamp: 2;         /* Ограничиваем количество строк */
+      -webkit-box-orient: vertical;  /* Указываем направление флексбокса */
+      overflow: hidden;              /* Скрываем текст, выходящий за границы */
+      text-overflow: ellipsis;       /* Добавляем "..." в конце */
+      max-height: 3em;              /* Опционально: ограничиваем высоту (2 строки × 1.5em) */
+      line-height: 1.5em;
+
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+      &:focus-visible,&:hover,&:active {
+        color: var(--link-hover-color);
+      }
+    }
+    
+  }
+  &__wrapper-type {
+    padding-top: 10px;
+    opacity: 0.6;
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--color-gray);
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    .left-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      p {
+        padding: 0 10px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--color-link);
+        background-color: rgba(0, 0, 0, 0.06);
+        position: relative;
+      }
+      .box-price-sale {
+        padding: 0 0 10px 10px;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        .top-price {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          .discount {
+            padding: 3px 9px;
+            font-family: var(--second-family);
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            color: var(--color-white);
+            background-color: var(--link-catalog-hover);
+          }
+          .old {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 20px;
+            color: var(--color-gray);
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              z-index: 2;
+              height: 1px;
+              width: 100%;
+              background-color: var(--link-catalog-hover);
+              transform: rotate(-10deg);
+            }
+          }
+        }
+        .price {
+          margin: 0;
+          font-family: var(--font-family);
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 100%;
+          letter-spacing: -0.03em;
+          color: var(--color-link);
+        }
+      }
+    }
+    .right-info {
+      padding: 0 10px 10px 0;
+      display: flex;
+      align-items: end;
+      .link-basket {
+        display: flex;
+        width: 36px;
+        min-width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--link-catalog-hover);
+        transition: background-color 0.4s ease-in-out;
+        &:focus,&:focus-visible {
+          outline: none;
+        }
+        &:focus-visible,&:hover,&:active {
+          background-color: var(--link-catalog);
+        }
+        .svg {
+          display: flex;
+        }
+        .text {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@supports not (-webkit-line-clamp: 2) {
+  .card-product__title a {
+    display: block;
+    max-height: 3em;         /* 2 строки × 1.5em */
+    line-height: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;     /* Разрешаем перенос строк */
+  }
+}

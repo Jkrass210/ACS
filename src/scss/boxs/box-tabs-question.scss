@@ -1,0 +1,60 @@
+.box-tabs-question {
+  width: 100%;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--color-white);
+  }
+  &__btn {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: var(--color-link);
+    transition: color 0.4s ease-in-out;
+    svg {
+      color: var(--link-catalog-hover);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,&:hover,&:active {
+      color: var(--link-hover-color);
+      svg {
+        color: var(--link-catalog);
+      }
+    }
+    &.active {
+      padding-bottom: 0;
+      svg {
+        transform: rotate(180deg);
+      }
+      & + .box-tabs-question__desc {
+        display: block;
+      }
+    }
+  }
+  &__desc {
+    display: none;
+    padding: 24px;
+    padding-top: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-gray);
+  }
+}

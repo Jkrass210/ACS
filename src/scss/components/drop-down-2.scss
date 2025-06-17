@@ -1,0 +1,85 @@
+.drop-down-2 {
+  position: relative;
+  padding: 9px 52px 9px 16px;
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+  background-color: var(--color-white);
+  &__btn {
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+    padding: 20px 16px;
+    display: flex;
+    justify-content: end;
+    color: var(--color-link);
+    transition: color 0.4s ease-in-out;
+    svg {
+      transition: transform 0.4s ease-in-out;
+    }
+    &.active {
+      & + .drop-down-2__list {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+      }
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--link-catalog-hover);
+    }
+  }
+  &__list {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-white);
+    width: 100%;
+    padding: 9px 16px 9px 16px;
+    box-shadow: 0 0 16px 0 rgba(9, 8, 28, .1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out, z-index 0.4s ease-in-out;
+    li {
+      cursor: pointer;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--color-link);
+      transition: color 0.4s ease-in-out;
+      &:hover,&:active {
+        color: var(--link-catalog-hover);
+      }
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+  &__label {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-gray);
+  }
+  &__input {
+    width: 100%;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-link);
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+  }
+}

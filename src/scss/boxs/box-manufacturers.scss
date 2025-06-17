@@ -1,0 +1,48 @@
+.box-manufacturers {
+  &__slide {
+    background-color: var(--color-white);
+    position: relative;
+    &-link {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+    }
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 50%;
+    }
+  }
+  .slick-next:before, .slick-prev:before {
+      width: 54px !important;
+      height: 54px !important;
+      background-position: center;
+      background-color: var(--color-white);
+      border-radius: 100%;
+      background-size: 24px 24px;
+      bottom: -17px;
+      box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+    }
+    .slick-next{
+      right: 24px;
+    }
+    .slick-next:before {
+      background-image: url(../img/arrow-right.svg);
+    }
+    .slick-prev {
+      left: 24px;
+    }
+    .slick-prev:before {
+      background-image: url(../img/arrow-left.svg);
+    }
+    .slick-disabled {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+}

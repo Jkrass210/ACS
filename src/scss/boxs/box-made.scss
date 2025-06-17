@@ -1,0 +1,44 @@
+.box-made {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--link-catalog-hover);
+  &__content-wrapper {
+    display: flex;
+    gap: 15px;
+  }
+  &__left {
+    width: calc(255 / 1280 * 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    margin-bottom: 16px;
+    color: var(--color-white);
+  }
+  &__desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-white);
+  }
+  &__right {
+    width: calc(1010 / 1280 * 100%);
+  }
+  &__link {
+    display: inline-block;
+    padding: 20px 24px;
+    border: 1px solid var(--color-white);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-white);
+    transition: border-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:active,&:hover {
+      border-color: var(--color-link);
+    }
+  }
+}

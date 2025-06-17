@@ -1,0 +1,49 @@
+body {
+  font-family: var(--font-family);
+  background: var(--color-body);
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+:root {
+  --line-top-color: #ebeef2;
+  --black-color: #000;
+  --link-hover-color: #0F203D;
+  --link-catalog: #d0241f;
+  --link-catalog-hover: #E83832;
+  --border-search: #c2c2c2;
+  --color-counter: #646469;
+  --color-link: #1a2a42;
+  --color-white: #fff;
+  --color-body: #f4f7f9;
+  --color-gray: #6a7588;
+  --card-collor-hover: #e1e9ef;
+}
+
+:root {
+  --font-family: "Manrope", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Gilroy", sans-serif;
+  --font3: "Jost", sans-serif;
+}
+
+.my-section {
+  margin-bottom: 80px;
+}
+
+.slider-container {
+  margin: 0 auto;
+  max-width: 1312px;
+  width: 100%;
+}
