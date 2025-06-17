@@ -18,7 +18,7 @@ export const html = () => {
         webpHtmlNosvg()
       )
     )
-    .pipe(
+    /*.pipe(
       app.plugins.if(
         app.isBuild,
           versionNumber({
@@ -36,7 +36,7 @@ export const html = () => {
             }
           })
       )
-    )
+    )*/
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browsersync.stream())
 }
