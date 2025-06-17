@@ -22,6 +22,7 @@ export const path = {
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     normalize: `${srcFolder}/scss/normalize.css`,
+    slickCscc: `${srcFolder}/scss/*.css`,
     css: `${srcFolder}/css/**/*`,
     scss: `${srcFolder}/scss/*.scss`,
     html: `${srcFolder}/*.html`,
