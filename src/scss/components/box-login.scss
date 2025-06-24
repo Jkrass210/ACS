@@ -1,6 +1,7 @@
 .box-login {
   display: flex;
   align-items: center;
+
   &__btn {
     padding: 11px 24px;
     display: flex;
@@ -8,6 +9,11 @@
     align-items: center;
     background-color: var(--line-top-color);
     transition: background-color 0.4s ease-in-out;
+
+    svg {
+      color: var(--black-color);
+    }
+
     .text {
       font-family: var(--font-family);
       font-weight: 400;
@@ -15,8 +21,48 @@
       line-height: 93%;
       color: var(--black-color);
     }
-    &:hover,&:active,&:focus-visible {
+
+    &:hover,
+    &:active,
+    &:focus-visible {
       background-color: var(--border-search);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .box-login {
+    &__btn {
+      padding: 0;
+      background-color: transparent;
+      flex-direction: column;
+      gap: 6px;
+
+      svg {
+        color: var(--link-catalog);
+      }
+
+      .text {
+        font-family: var(--third-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 108%;
+        color: var(--black-color);
+      }
+
+      &:hover,
+      &:active,
+      &:focus-visible {
+        background-color: transparent;
+
+        svg {
+          color: var(--link-catalog-hover);
+        }
+
+        .text {
+          color: var(--link-hover-color);
+        }
+      }
     }
   }
 }

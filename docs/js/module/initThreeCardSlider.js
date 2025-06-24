@@ -14,13 +14,13 @@ export function initThreeCardSlider() {
       dots: false,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 825,
           settings: {
             slidesToShow: isTwoCardSlider ? 1 : 2
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 560,
           settings: {
             slidesToShow: 1
           }

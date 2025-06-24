@@ -14,9 +14,11 @@
   &__btn {
     padding: 24px;
     display: flex;
+    gap: 30px;
     justify-content: space-between;
     font-family: var(--font-family);
     font-weight: 700;
+    text-align: start;
     font-size: 20px;
     line-height: 100%;
     letter-spacing: -0.03em;
@@ -56,5 +58,23 @@
     font-size: 16px;
     line-height: 150%;
     color: var(--color-gray);
+  }
+}
+
+@media (max-width: 825px) {
+  .box-tabs-question {
+    &__btn {
+      padding: 15px;
+      font-size: 14px;
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    &__desc {
+      padding: 15px;
+      padding-top: 0;
+      font-size: 13px;
+    }
   }
 }

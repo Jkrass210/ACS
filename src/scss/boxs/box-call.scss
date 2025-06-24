@@ -22,3 +22,11 @@
     }
   }
 }
+
+@media (max-width: 825px) {
+  .box-call {
+    &__btn {
+      font-size: 14px;
+    }
+  }
+}

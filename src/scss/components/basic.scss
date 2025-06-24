@@ -1,4 +1,5 @@
 body {
+  min-width: 380px;
   font-family: var(--font-family);
   background: var(--color-body);
 }
@@ -29,6 +30,7 @@ body {
   --color-body: #f4f7f9;
   --color-gray: #6a7588;
   --card-collor-hover: #e1e9ef;
+  --color-for: #eaf5ff;
 }
 
 :root {
@@ -46,4 +48,10 @@ body {
   margin: 0 auto;
   max-width: 1312px;
   width: 100%;
+}
+
+@media (max-width: 825px) {
+  .my-section {
+    margin-bottom: 40px;
+  }
 }

@@ -83,3 +83,33 @@
     }
   }
 }
+
+@media (max-width: 825px) {
+  .card-reviews {
+    padding: 15px;
+    gap: 30px;
+    &__top {
+      .personal-info {
+        .left {
+          .name-title {
+            font-size: 16px;
+          }
+          .data-time {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    &__desc {
+      font-size: 14px;
+    }
+    &__link {
+      align-items: center;
+      padding: 4px 8px;
+      font-size: 14px;
+      img {
+        width: 18px;
+      }
+    }
+  }
+}

@@ -32,3 +32,45 @@
     gap: clamp(5px, 2vw, 54px);
   }
 }
+
+@media (max-width: 1024px) {
+  .box-banner-counter {
+    &__wpapper {
+      padding-top: 60px;
+      padding-bottom: 100px;
+      background-position: center right -100px, bottom left;
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .box-banner-counter {
+    &__wpapper {
+      padding-top: 40px;
+      padding-bottom: 60px;
+      background-image: url(../img/banner-counter/1.png);
+      background-position: center right -150px;
+    }
+    &__box-desc {
+      margin-bottom: 30px;
+      font-size: 12px;
+    }
+    &__list {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .box-banner-counter {
+    &__wpapper {
+      padding-top: 30px;
+      padding-bottom: 40px;
+      background-position: center right -200px;
+    }
+    &__box-desc {
+      margin-bottom: 15px;
+      font-size: 10px;
+    }
+  }
+}

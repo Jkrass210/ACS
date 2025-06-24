@@ -1,0 +1,22 @@
+.link-for {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background-color: var(--color-for);
+  border-radius: 90px;
+  .text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 93%;
+    color: var(--black-color);
+    white-space: nowrap;
+  }
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover,&:active {
+    background-color: var(--border-search);
+  }
+}

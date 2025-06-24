@@ -1,9 +1,16 @@
 .nev-section-title {
-  margin-bottom: 32px;
+  margin-bottom: 27px;
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 40px;
+  font-size: 26px;
   line-height: 100%;
   letter-spacing: -0.03em;
   color: var(--color-link);
+}
+
+@media (max-width: 825px) {
+  .nev-section-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
 }

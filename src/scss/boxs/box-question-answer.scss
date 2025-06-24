@@ -17,6 +17,23 @@
   .box-right {
     width: calc(820 / 1280 * 100%);
   }
+}
 
-  
+@media (max-width: 1024px) {
+  .box-question-answer {
+    &__wrapper {
+      gap: 15px;
+      flex-direction: column;
+    }
+    .box-left {
+      max-width: 100%;
+      &__desc {
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+    }
+    .box-right {
+      width: 100%;
+    }
+  }
 }

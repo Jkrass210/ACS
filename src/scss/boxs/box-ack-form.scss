@@ -1,5 +1,6 @@
 .box-ack-form {
   display: flex;
+
   &__btn {
     padding: 21px 24px;
     background-color: var(--link-catalog-hover);
@@ -7,11 +8,34 @@
     font-weight: 500;
     font-size: 16px;
     color: var(--color-white);
-    &:focus,&:focus-visible {
+
+    &:focus,
+    &:focus-visible {
       outline: none;
     }
-    &:focus-visible,&:hover,&:active {
+
+    &:focus-visible,
+    &:hover,
+    &:active {
       background-color: var(--link-catalog);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .box-ack-form {
+    &__btn {
+      padding: 15px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .box-ack-form {
+    &__btn {
+      padding: 10px;
+      font-size: 12px;
     }
   }
 }

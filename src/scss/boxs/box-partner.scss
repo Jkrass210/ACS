@@ -28,3 +28,51 @@
     align-items: center;
   }
 }
+
+@media (max-width: 1024px) {
+  .box-partner {
+    &__list {
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .box-partner {
+    &__content {
+      min-height: 400px;
+    }
+    &__desc {
+      font-size: 14px;
+    }
+    &__left {
+      gap: 30px;
+      min-height: 240px;
+    }
+    &__list {
+      gap: 15px;
+      img {
+        max-width: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .box-partner {
+    &__left {
+      min-height: 180px;
+    }
+    &__content {
+      min-height: 300px;
+    }
+    &__list {
+      gap: 7px;
+      img {
+        width: 50px;
+      }
+    }
+  }
+}

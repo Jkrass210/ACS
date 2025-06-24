@@ -7,6 +7,8 @@ import { initThreeCardSlider } from './module/initThreeCardSlider.js';
 import { initFalseImg } from './module/initFalseImg.js';
 import { initSliderItemsCards } from './module/initSliderItemsCards.js';
 import { initHelpBtnToggle } from './module/initHelpBtnToggle.js';
+import { initMoveElementOnResize } from './module/initMoveElementOnResize.js';
+import { initFooterAlert } from './module/initFooterAlert.js';
 
 
 if (document.querySelectorAll('.box-call__btn')) {
@@ -70,9 +72,20 @@ if (document.querySelector('.box-hero__main-banner-slider')) {
   $('.box-hero__main-banner-slider').slick({
     dots: true,
     infinite: false,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear'
+    //speed: 500,
+    //fade: true,
+    cssEase: 'linear',
+    slidesToShow: 2,  // Показывать 2 слайда одновременно
+    slidesToScroll: 2, // Прокручивать по 2 слайда
+    responsive: [
+      {
+        breakpoint: 825,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 }
 
@@ -142,4 +155,48 @@ if (document.querySelectorAll('.help-btn')) {
   initHelpBtnToggle()
 }
 
+if (document.querySelectorAll('.slider-five-card__list')) {
+  document.querySelectorAll('.slider-five-card__list').forEach((slider) => {
+    $(slider).slick({
+      slidesToShow: 5,       // Показывать 5 слайдов одновременно
+      slidesToScroll: 5,     // Прокручивать по 5 слайдов
+      infinite: false,       // Бесконечная прокрутка отключена
+      dots: false,            // Показывать точки-индикаторы
+      arrows: true,          // Показывать стрелки навигации
+      responsive: [          // Адаптивные настройки
+        {
+          breakpoint: 1200,  // При ширине экрана меньше 1200px
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4
+          }
+        },
+        {
+          breakpoint: 992,   // При ширине экрана меньше 992px
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 768,   // При ширине экрана меньше 768px
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+      ]
+    });
+  });
+}
+
+if (document.querySelector('.header-alert__line-top-wrapper' && '.header-alert__left-wrapper')) {
+  initMoveElementOnResize({
+    breakpoint: 825
+  });
+}
+
+if (document.querySelectorAll('.footer-alert .box-left-1__bottom')) {
+  initFooterAlert();
+};
 

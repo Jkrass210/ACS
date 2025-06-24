@@ -19,13 +19,13 @@
     }
   }
   .slick-next:before, .slick-prev:before {
-      width: 54px !important;
-      height: 54px !important;
+      width: 48px !important;
+      height: 48px !important;
       background-position: center;
       background-color: var(--color-white);
       border-radius: 100%;
       background-size: 24px 24px;
-      bottom: -17px;
+      bottom: -14px;
       box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
     }
     .slick-next{
@@ -45,4 +45,24 @@
       pointer-events: none;
       visibility: hidden;
     }
+}
+
+@media (max-width: 1024px) {
+  .box-manufacturers {
+    .slick-next {
+      right: 10px;
+    }
+
+    .slick-prev {
+      left: 10px;
+    }
+
+    .slick-next:before,
+    .slick-prev:before {
+      width: 35px !important;
+      height: 35px !important;
+      bottom: -8px;
+      background-size: 20px 20px;
+    }
+  }
 }

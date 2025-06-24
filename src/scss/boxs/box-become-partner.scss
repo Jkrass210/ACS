@@ -16,3 +16,21 @@
     }
   }
 }
+
+@media (max-width: 825px) {
+  .box-become-partner {
+    &__btn {
+      padding: 15px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .box-become-partner {
+    &__btn {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+}

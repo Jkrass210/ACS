@@ -1,40 +1,72 @@
 .box-hero {
+  &__banner {
+    position: relative;
+    margin: 0 -10px;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 100%;
+      background-color: var(--color-body);
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+    }
+
+    &::before {
+      right: 0;
+      z-index: 2;
+    }
+  }
 
   &__main-banner-slider {
     &.slick-dotted.slick-slider {
       margin-bottom: 0;
     }
+
     .slick-track {
       gap: 0 !important;
     }
-    .slick-next:before, .slick-prev:before {
-      width: 64px !important;
-      height: 64px !important;
+
+    .slick-next:before,
+    .slick-prev:before {
+      width: 48px !important;
+      height: 48px !important;
       background-position: center;
       background-color: var(--color-white);
       border-radius: 100%;
       background-size: 24px 24px;
-      bottom: -22px;
+      bottom: -14px;
     }
-    .slick-next{
+
+    .slick-next {
       right: 24px;
     }
+
     .slick-next:before {
       background-image: url(../img/arrow-right.svg);
     }
+
     .slick-prev {
       left: 24px;
     }
+
     .slick-prev:before {
       background-image: url(../img/arrow-left.svg);
     }
+
     .slick-disabled {
       opacity: 0;
       pointer-events: none;
       visibility: hidden;
     }
+
     .slick-dots {
-      position: static;
+      position: relative;
       height: 38px;
       gap: 4px;
       bottom: auto;
@@ -42,27 +74,53 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 100%;
+        background-color: var(--color-body);
+      }
+
+      &::after {
+        left: 0;
+      }
+
+      &::before {
+        right: 0;
+      }
+
       li {
         height: 14px;
         width: auto;
         margin: 0;
+
         &.slick-active {
           button::before {
             background-color: var(--link-catalog-hover);
           }
         }
+
         button {
           position: relative;
           padding: 0;
           width: 85px;
-          &:focus,&:focus-visible {
+
+          &:focus,
+          &:focus-visible {
             outline: none;
           }
-          &:focus-visible,&:hover,&:active {
+
+          &:focus-visible,
+          &:hover,
+          &:active {
             &::before {
               background-color: var(--link-catalog-hover);
             }
           }
+
           &::before {
             content: "";
             width: 100%;
@@ -78,35 +136,31 @@
     }
   }
 
-
-
-
-
-
-
-
-
-
-
-
+  &__slide {
+    padding: 0 10px;
+  }
 
   &__card-line {
     padding: 0 32px 32px;
     background-color: var(--color-white);
   }
+
   &__list-info {
     display: flex;
     flex-wrap: wrap;
     gap: clamp(5px, 2vw, 19px);
     align-items: center;
     justify-content: space-between;
+
     li {
       position: relative;
       flex: 1;
       padding-left: 30px;
+
       &::before {
         content: "";
         position: absolute;
+        top: 10%;
         left: 0;
         height: 16px;
         width: 15px;
@@ -114,14 +168,105 @@
         background-color: var(--link-catalog-hover);
         transform: translateY(50%);
       }
+
       p {
         font-family: var(--font-family);
         font-weight: 700;
-        font-size: 16px;
-        line-height: 100%;
+        font-size: 14px;
+        line-height: 136%;
         letter-spacing: -0.03em;
         color: var(--color-link);
       }
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .box-hero {
+    &__main-banner-slider {
+      .slick-dots {
+        height: 30px;
+
+        li {
+          button {
+            height: 15px;
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .box-hero {
+    &__card-line {
+      padding: 0 20px 20px;
+
+      li::before {
+        transform: none;
+      }
+    }
+
+    &__list-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      li {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .box-hero {
+    &__main-banner-slider {
+      height: auto !important;
+
+      .slick-next {
+        right: 10px;
+      }
+
+      .slick-prev {
+        left: 10px;
+      }
+
+      .slick-next:before,
+      .slick-prev:before {
+        width: 35px !important;
+        height: 35px !important;
+        bottom: -8px;
+        background-size: 20px 20px;
+      }
+    }
+
+    &__list-info {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width:560px) {
+  .box-hero {
+    &__main-banner-slider {
+      .slick-dots {
+        height: 20px;
+
+        li {
+          button {
+            height: 10px;
+            width: 30px;
+          }
+        }
+      }
+    }
+    &__card-line {
+      padding: 0 10px 10px;
     }
   }
 }

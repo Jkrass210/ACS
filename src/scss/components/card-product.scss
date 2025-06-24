@@ -52,7 +52,7 @@
       left: 11px;
       display: flex;
       flex-wrap: wrap;
-      column-gap: 15px;
+      column-gap: 20px;
       row-gap: 5px;
       top: 0;
       span {
@@ -271,5 +271,122 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;     /* Разрешаем перенос строк */
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-product {
+    &__top {
+      padding: 7px 7px 0 7px;
+    }
+    &__title {
+      a {
+        font-size: 14px;
+      }
+    }
+    &__wrapper-name {
+      p {
+        font-size: 12px;
+      }
+    }
+    &__wrapper-type {
+      p {
+        font-size: 12px;
+      }
+    }
+    &__bottom {
+      .left-info {
+        gap: 6px;
+        p {
+          font-size: 13px;
+        }
+        .box-price-sale {
+          padding: 0 0 7px 7px;
+          .top-price {
+            .old {
+              font-size: 16px;
+            }
+          }
+          .price {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .box-img {
+      .marker-group {
+        span {
+          font-size: 11px;
+          &::before {
+            border-top: 25px solid transparent;
+          }
+          &::after {
+            border-bottom: 25px solid transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .card-product {
+    gap: 7px;
+    &__top {
+      padding: 5px 5px 0 5px;
+    }
+    &__title {
+      a {
+        font-size: 12px;
+      }
+    }
+    &__wrapper-name {
+      p {
+        font-size: 11px;
+      }
+    }
+    &__wrapper-type {
+      p {
+        font-size: 11px;
+      }
+    }
+    .box-img {
+      .marker-group {
+        span {
+          font-size: 10px;
+          padding: 5px 4px;
+          &::before {
+            border-top: 20px solid transparent;
+          }
+          &::after {
+            border-bottom: 20px solid transparent;
+          }
+        }
+      }
+    }
+    &__bottom {
+      .box-price-sale {
+        padding: 0 0 5px 5px;
+      }
+      .left-info {
+        p {
+          font-size: 12px;
+        }
+        .box-price-sale {
+          .top-price {
+            .discount {
+              font-size: 12px;
+              padding: 2px 6px;
+            }
+            .old {
+              font-size: 14px;
+            }
+          }
+          .price {
+            font-size: 16px;
+          }
+        }
+      }
+    }
   }
 }

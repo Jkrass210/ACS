@@ -16,3 +16,20 @@
     background-color: var(--link-catalog-hover);
   }
 }
+
+@media (max-width: 825px) {
+  .btn-catalog {
+    padding: 0;
+    flex-direction: column;
+    gap: 6px;
+    font-family: var(--third-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 108%;
+    color: var(--black-color);
+    background-color: transparent;
+    svg {
+      color: var(--link-catalog);
+    }
+  }
+}

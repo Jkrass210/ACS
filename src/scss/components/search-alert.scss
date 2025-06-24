@@ -39,3 +39,13 @@
     }
   }
 }
+
+@media (max-width: 825px) {
+  .search-alert {
+    &__form {
+      input {
+        font-size: 12px;
+      }
+    }
+  }
+}

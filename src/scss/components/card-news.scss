@@ -55,3 +55,41 @@
     color: var(--color-gray);
   }
 }
+
+@media (max-width: 1024px) {
+  .card-news {
+    padding: 6px;
+    &__box-img {
+      &::before {
+        padding-top: 50%;
+      }
+    }
+    &__link {
+      gap: 6px;
+    }
+    &__title {
+      padding: 0;
+      font-size: 16px;
+    }
+    &__time {
+      padding: 0;
+      padding-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .card-news {
+    &__box-img {
+      &::before {
+        padding-top: 40%;
+      }
+    }
+    &__title {
+      font-size: 12px;
+    }
+    &__time {
+      font-size: 12px;
+    }
+  }
+}

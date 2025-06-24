@@ -32,3 +32,27 @@
     color: var(--color-white);
   }
 }
+
+@media (max-width: 825px) {
+  .cardCounter {
+    gap: 5px;
+    &__number {
+      font-size: 24px;
+    }
+    &__desc {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .cardCounter {
+    gap: 3px;
+    &__number {
+      font-size: 20px;
+    }
+    &__desc {
+      font-size: 12px;
+    }
+  }
+}

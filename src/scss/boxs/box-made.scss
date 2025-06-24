@@ -42,3 +42,44 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .box-made {
+    &__desc {
+      font-size: 12px;
+    }
+    &__link {
+      padding: 15px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .box-made {
+    &__left {
+      width: 30%;
+    }
+    &__right {
+      width: calc(70% - 15px);
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .box-made {
+    &__left {
+      width: calc(50% - 5px);
+    }
+    &__right {
+      width: calc(50% - 5px);
+    }
+    &__content-wrapper {
+      gap: 10px;
+    }
+    &__link {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+}

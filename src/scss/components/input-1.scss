@@ -25,3 +25,15 @@
     }
   }
 }
+
+@media (max-width: 825px) {
+  .input-1 {
+    padding: 6px 10px;
+    &__label {
+      font-size: 12px;
+    }
+    &__input {
+      font-size: 14px;
+    }
+  }
+}
