@@ -157,7 +157,7 @@
       flex: 1;
       padding-left: 30px;
 
-      &::before {
+      /*&::before {
         content: "";
         position: absolute;
         top: 10%;
@@ -167,7 +167,7 @@
         clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 100%);
         background-color: var(--link-catalog-hover);
         transform: translateY(50%);
-      }
+      }*/
 
       p {
         font-family: var(--font-family);

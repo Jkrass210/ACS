@@ -9,6 +9,7 @@ import { initSliderItemsCards } from './module/initSliderItemsCards.js';
 import { initHelpBtnToggle } from './module/initHelpBtnToggle.js';
 import { initMoveElementOnResize } from './module/initMoveElementOnResize.js';
 import { initFooterAlert } from './module/initFooterAlert.js';
+import { initBurgerMenu } from './module/initBurgerMenu.js';
 
 
 if (document.querySelectorAll('.box-call__btn')) {
@@ -199,4 +200,8 @@ if (document.querySelector('.header-alert__line-top-wrapper' && '.header-alert__
 if (document.querySelectorAll('.footer-alert .box-left-1__bottom')) {
   initFooterAlert();
 };
+
+if (document.querySelector('#burger')){
+  initBurgerMenu()
+}
 
