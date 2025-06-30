@@ -1,0 +1,22 @@
+.box-leave-review {
+  display: flex;
+  &__btn {
+    padding: 21px 24px;
+    background-color: var(--link-catalog-hover);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--color-white);
+    transition: background-color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--link-catalog);
+    }
+  }
+  &__modal {
+    width: 100%;
+    max-width: 400px;
+  }
+}

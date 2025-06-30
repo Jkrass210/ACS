@@ -42,6 +42,10 @@
     font-size: 14px;
     line-height: 93%;
     color: #000;
+    transition: border-color 0.4s ease-in-out;
+    &.error {
+      border-color: var(--link-catalog-hover);
+    }
   }
   &__textarea {
     height: 100px;
@@ -52,8 +56,12 @@
     font-size: 14px;
     line-height: 93%;
     color: #000;
+    transition: border-color 0.4s ease-in-out;
     &::placeholder {
       color: rgba(0, 0, 0, 0.35);
+    }
+    &.error {
+      border-color: var(--link-catalog-hover);
     }
   }
   &__submit {

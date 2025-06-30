@@ -1,0 +1,33 @@
+.box-certificate {
+  .vertical {
+    display: grid;
+    gap: 7px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 825px) {
+  .box-certificate {
+    .vertical {
+      display: grid;
+      gap: 7px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .box-certificate {
+    .vertical {
+      display: grid;
+      gap: 7px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

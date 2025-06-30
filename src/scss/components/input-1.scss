@@ -4,6 +4,10 @@
   gap: 2px;
   flex-direction: column;
   background-color: var(--color-white);
+  transition: background-color 0.4s ease-in-out;
+  &:has(.input-1__input.error) {
+    background-color: #d67c79;
+  }
   &__label {
     font-family: var(--font-family);
     font-weight: 400;

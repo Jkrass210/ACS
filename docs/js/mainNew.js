@@ -10,6 +10,8 @@ import { initHelpBtnToggle } from './module/initHelpBtnToggle.js';
 import { initMoveElementOnResize } from './module/initMoveElementOnResize.js';
 import { initFooterAlert } from './module/initFooterAlert.js';
 import { initBurgerMenu } from './module/initBurgerMenu.js';
+import { fieldsetStar } from './module/fieldsetStar.js';
+import { certificateChanges } from './module/certificateChanges.js';
 
 
 if (document.querySelectorAll('.box-call__btn')) {
@@ -45,9 +47,26 @@ if (document.querySelectorAll('.box-become-partner__btn')) {
   });
 }
 
+if (document.querySelectorAll('.box-leave-review__btn')) {
+  initModal({
+    boxSelector: '.box-leave-review',
+    triggerSelector: '.box-leave-review__btn',
+    modalWrapperSelector: '.box-leave-review__modal-wrapper',
+    modalContentSelector: '.box-leave-review__modal',
+    closeBtnSelector: '.btn-close',
+    activeClass: 'active'
+  });
+}
+
 if (document.querySelectorAll('.box-call__form')) {
   document.querySelectorAll(".box-call__form").forEach(form => {
     setupFormValidation(form, ".box-call__submit");
+  });
+}
+
+if (document.querySelectorAll('.box-leave-review__form')) {
+  document.querySelectorAll(".box-leave-review__form").forEach(form => {
+    setupFormValidation(form, ".box-leave-review__submit");
   });
 }
 
@@ -205,3 +224,10 @@ if (document.querySelector('#burger')){
   initBurgerMenu()
 }
 
+if (document.querySelectorAll('fieldset.box-star')) {
+  fieldsetStar()
+}
+
+if (document.querySelector('.box-certificate .help-btn')){
+  certificateChanges()
+}
