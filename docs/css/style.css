@@ -145,6 +145,10 @@ body {
   background: var(--color-body);
 }
 
+/** {
+  outline: 2px solid red;
+}*/
+
 .list-reset {
   margin: 0;
   padding: 0;
@@ -5329,7 +5333,7 @@ body {
   }
 
   .horizontal .card-certificate__box-img {
-    max-width: 170px;
+    max-width: 150px;
   }
 
   .horizontal .card-certificate__link {
