@@ -3,17 +3,23 @@
   @@include('html/components/head.html',{"title":"Главная - AKC"})
 <body>
   <div class="wrapper">
+    @@include('html/boxs/preloader.html')
     @@include('html/boxs/header.html')
     <main class="content">
       @@include('html/boxs/box-hero.html')
+      @@include('html/boxs/box-popular.html')
       @@include('html/boxs/slider-five-card.html',{"title":"Вы ранее просматривали"})
       @@include('html/boxs/box-link-tiles.html')
-      @@include('html/boxs/slider-five-card.html',{"title":"Подборка с выгодными ценами"})
-      @@include('html/boxs/box-popular.html')
-      @@include('html/boxs/box-recommend.html')
+      @@include('html/boxs/box-product-collections.html')
+      @@include('html/boxs/box-recommends.html')
+      @@include('html/boxs/slider-five-card.html',{"title":"Выгодные цены"})
+      @@include('html/boxs/box-official-distributor.html')
+      @@include('html/boxs/slider-five-card.html',{"title":"Новинки и актуальные предложения"})
+      
+      <!--@@include('html/boxs/box-recommend.html')-->
       <!--@@include('html/boxs/box-selection.html')-->
       @@include('html/boxs/box-manufacturers.html')
-      @@include('html/boxs/box-offers.html')
+      <!--@@include('html/boxs/box-offers.html')-->
       @@include('html/boxs/box-partner.html')
       @@include('html/boxs/box-made.html')
       @@include('html/boxs/box-reviews.html')

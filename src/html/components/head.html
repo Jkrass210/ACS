@@ -15,7 +15,7 @@
     <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
     <!--<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;900&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">-->
 
-    
+
 
     <!--<link href="css/_cdn/styles.css" rel="stylesheet">-->
     <link href="css/styles.css" rel="stylesheet">
@@ -23,13 +23,19 @@
     <link href="css/catalog_style.css" rel="stylesheet">
 
     <link href="css/style.min.css" rel="stylesheet">
-    
+
 
     <!--<link href="css/lk_manager_styles.css" rel="stylesheet">-->
     <!--<link href="css/_cdn/select2_checkbox.min.css" rel="stylesheet">-->
 
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ65H6JDZN"></script>
+    <script>
+        window.addEventListener('load', function () {
+            document.body.classList.remove('loading');
+            document.getElementById('preloader').style.display = 'none';
+        });
+    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
 

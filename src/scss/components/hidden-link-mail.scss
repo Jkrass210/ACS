@@ -1,20 +1,21 @@
 .hidden-link-mail {
-  display: none;
-}
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 93%;
+  color: var(--black-color);
 
-@media (max-width: 825px) {
-  .hidden-link-mail {
-    display: flex;
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 93%;
-    color: var(--black-color);
-    &:focus,&:focus-visible {
-      outline: none;
-    }
-    &:focus-visible,&:hover,&:active {
-      color: var(--link-hover-color);
-    }
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover,
+  &:active {
+    color: var(--link-hover-color);
   }
 }

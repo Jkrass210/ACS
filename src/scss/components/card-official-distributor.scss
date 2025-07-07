@@ -1,0 +1,38 @@
+.card-official-distributor {
+  height: 100%;
+  min-height: 132px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: var(--color-card-distr);
+
+  &__top {
+    display: flex;
+
+    img {
+      min-width: 24px;
+    }
+  }
+
+  &__bottom {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 136%;
+    color: var(--black-color);
+  }
+}
+
+@media (max-width: 825px) {
+  .card-official-distributor {
+    padding: 15px;
+    min-height: 85px;
+    gap: 7px;
+
+    &__bottom {
+      font-size: 12px;
+    }
+  }
+}

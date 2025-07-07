@@ -1,0 +1,22 @@
+.box-official-distributor {
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    li {
+      min-width: 220px;
+      flex: 1;
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  .box-official-distributor {
+    &__list {
+      gap: 10px;
+    }
+  }
+}

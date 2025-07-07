@@ -17,12 +17,28 @@
     line-height: 93%;
     color: var(--black-color);
     transition: color 0.4s ease-in-out;
+    svg {
+      color: var(--link-catalog);
+    }
+    span {
+      i {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 93%;
+        font-style: normal;
+        color: var(--color-gray-city);
+      }
+    }
     &:focus,&:focus-visible {
       outline: none;
     }
     &:hover {
       color: var(--link-hover-color);
     }
+  }
+  &__nav-last {
+    flex: 1;
   }
   /*&__box-nav {
     display: flex;
@@ -57,7 +73,12 @@
   &__box-connect {
     display: flex;
     align-items: center;
-    gap: clamp(5px, 2vw, 37px);
+    gap: clamp(5px, 2vw, 40px);
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: clamp(5px, 2vw, 40px);
+    }
   }
   &__link {
     &.phone {
@@ -117,12 +138,13 @@
     gap: clamp(5px, 2vw, 32px);
   }
   &__line-last {
-    padding: 14px 0 20px;
+    padding: 24px 0 27px;
   }
   &__list-last {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: clamp(5px, 2vw, 24px);
     li:first-child {
       a.link-last-nav {
@@ -162,11 +184,25 @@
       border-top: 1px solid #c2c2c2;
       background-color: var(--color-body);
     }
+    &__list-last {
+      justify-content: start;
+    }
   }
 }
 
 @media (max-width: 825px) {
   .header-alert {
+    &__link-city {
+      span {
+        i {
+          display: none;
+        }
+      }
+    }
+    &__box-connect {
+      width: 100%;
+      justify-content: space-between;
+    }
     &__line-top {
       position: relative;
       z-index: 70;
@@ -178,7 +214,7 @@
     }
     &__line-bottom {
       border: none;
-      padding: 24px 0 28px;
+      padding: 24px 0 18px;
     }
     &__box-logo {
       svg {
@@ -219,6 +255,7 @@
       opacity: 0;
       z-index: -1;
       padding-top: 80px;
+      padding-bottom: 80px;
       position: fixed;
       //z-index: 60;
       top: 0;
@@ -242,11 +279,29 @@
       flex-direction: column;
       align-items: start;
     }
+    &__nav-last {
+      width: 100%;
+      height: auto;
+      overflow: scroll;
+    }
     &__line-last-wrapper {
       flex-direction: column;
       align-items: start;
       gap: 10px;
       height: 100%;
+    }
+  }
+  .drop-down-1 {
+    flex-direction: column;
+    gap: 5px;
+    &__list {
+      padding: 0;
+      padding-left: 15px;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background-color: transparent;
+      box-shadow: none;
     }
   }
 }

@@ -1,0 +1,23 @@
+.link-all {
+  display: flex;
+  padding: 11px 15px;
+  background-color: var(--line-top-color);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 108%;
+  color: var(--black-color);
+  &:focus,&:focus-visible {
+    outline: none;
+  }
+  &:focus-visible,&:hover,&:active {
+    background-color: var(--card-collor-hover);
+  }
+}
+
+@media (max-width: 825px) {
+  .link-all {
+    padding: 10px;
+    font-size: 10px;
+  }
+}

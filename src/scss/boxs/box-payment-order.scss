@@ -69,6 +69,27 @@
     }
   }
 
+  &__submit {
+    padding: 20px 24px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    white-space: nowrap;
+    background-color: var(--color-link);
+    color: var(--color-white);
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      background-color: var(--link-hover-color);
+    }
+  }
+
   &__desc-bottom {
     font-family: var(--font-family);
     font-weight: 400;
@@ -93,8 +114,13 @@
       line-height: 100%;
       letter-spacing: -.03em;
     }
+
     &__list {
       flex-wrap: wrap;
+    }
+
+    &__submit {
+      padding: 20px 14px;
     }
   }
 }
@@ -103,20 +129,30 @@
   .box-payment-order {
     &__content-wrapper {
       padding: 50px 15px 10px 300px;
+
       &::after {
         background-position: bottom left -30px;
       }
     }
+
     &__list {
       gap: 6px;
       flex-direction: column;
+
       li {
         width: 100%;
       }
     }
+
+    &__submit {
+      padding: 20px 14px;
+      width: 100%;
+    }
+
     &__desc-top {
       margin-bottom: 10px;
     }
+
     &__form {
       margin-bottom: 10px;
     }
@@ -127,19 +163,28 @@
   .box-payment-order {
     &__content-wrapper {
       padding: 40px 15px 10px 250px;
+
       &::after {
         background-position: bottom left -50px;
       }
     }
+
+    &__submit {
+      font-size: 12px;
+    }
+
     &__title {
       font-size: 20px;
     }
+
     &__desc-top {
       font-size: 12px;
     }
+
     &__desc-bottom {
       font-size: 12px;
     }
+
     .slide-content__link {
       font-size: 12px;
       padding: 15px;
@@ -151,24 +196,30 @@
   .box-payment-order {
     &__content-wrapper {
       padding: 10px 10px 10px 10px;
+
       &::before {
         inset: 0;
       }
+
       &::after {
         background-image: none;
         background-position: bottom left -60px;
       }
     }
+
     &__title {
       margin-bottom: 5px;
     }
+
     &__desc-top {
       font-size: 10px;
       margin-bottom: 5px;
     }
+
     &__form {
       margin-bottom: 5px;
     }
+
     &__desc-bottom {
       font-size: 10px;
     }

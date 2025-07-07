@@ -5,12 +5,41 @@
   font-size: 26px;
   line-height: 100%;
   letter-spacing: -0.03em;
-  color: var(--color-link);
+  color: var(--black-color);
+
+  &-big {
+    font-weight: 700;
+    font-size: 38px;
+    color: var(--black-color);
+    line-height: 100%;
+    margin-bottom: 27px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nev-section-title {
+    &-big {
+      font-size: 30px;
+    }
+  }
 }
 
 @media (max-width: 825px) {
   .nev-section-title {
     margin-bottom: 15px;
     font-size: 20px;
+
+    &-big {
+      margin-bottom: 15px;
+      font-size: 26px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .nev-section-title {
+    &-big {
+      font-size: 20px;
+    }
   }
 }

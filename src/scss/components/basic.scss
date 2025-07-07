@@ -1,12 +1,14 @@
 body {
   min-width: 360px;
   font-family: var(--font-family);
-  background: var(--color-body);
+  background: var(--color-white);
 }
 
-/** {
+/*
+* {
   outline: 2px solid red;
-}*/
+}
+*/
 
 .list-reset {
   margin: 0;
@@ -27,7 +29,7 @@ body {
   --link-hover-color: #0F203D;
   --link-catalog: #d0241f;
   --link-catalog-hover: #E83832;
-  --border-search: #c2c2c2;
+  --border-search: #dadcde;
   --color-counter: #646469;
   --color-link: #1a2a42;
   --color-white: #fff;
@@ -35,6 +37,13 @@ body {
   --color-gray: #6a7588;
   --card-collor-hover: #e1e9ef;
   --color-for: #eaf5ff;
+  --color-gray-city: #8e8e8e;
+  --color-marker-1: #b6e05b;
+  --color-marker-2: #faf16b;
+  --color-green: #36a236;
+  --color-sale: #39393d;
+  --color-card-distr: #f5f8fc;
+
 }
 
 :root {

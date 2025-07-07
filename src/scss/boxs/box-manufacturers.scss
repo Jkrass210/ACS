@@ -1,24 +1,41 @@
 .box-manufacturers {
+  &__container {
+    margin: 0 -5px;
+  }
+
+  &__slider {
+    .slick-track {
+      gap: 0 !important;
+    }
+  }
+
   &__slide {
-    background-color: var(--color-white);
+    padding: 0 5px;
     position: relative;
+    box-sizing: border-box;
+
     &-link {
       position: absolute;
-      inset: 0;
+      inset: 0 5px;
       display: flex;
       align-items: center;
       justify-content: center;
-      &:focus,&:focus-visible {
+      background-color: var(--line-top-color);
+
+      &:focus,
+      &:focus-visible {
         outline: none;
       }
     }
+
     &::before {
       content: "";
       display: block;
       padding-top: 50%;
     }
   }
-  .slick-next:before, .slick-prev:before {
+
+  /*.slick-next:before, .slick-prev:before {
       width: 48px !important;
       height: 48px !important;
       background-position: center;
@@ -39,17 +56,33 @@
     }
     .slick-prev:before {
       background-image: url(../img/arrow-left.svg);
-    }
-    .slick-disabled {
-      opacity: 0;
-      pointer-events: none;
-      visibility: hidden;
-    }
+    }*/
+  .slick-next:before,
+  .slick-prev:before {
+    width: 40px !important;
+    height: 40px !important;
+    background-size: 40px 40px;
+    bottom: -10px;
+  }
+
+  .slick-next {
+    right: -10px;
+  }
+
+  .slick-prev {
+    left: -10px;
+  }
+
+  .slick-disabled {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 1024px) {
   .box-manufacturers {
-    .slick-next {
+    /*.slick-next {
       right: 10px;
     }
 
@@ -63,6 +96,30 @@
       height: 35px !important;
       bottom: -8px;
       background-size: 20px 20px;
+    }*/
+
+    .slick-next:before,
+    .slick-prev:before {
+      width: 29px !important;
+      height: 29px !important;
+      bottom: -5px;
+      background-size: 29px 29px;
+    }
+
+    .slick-next {
+      right: -10px;
+
+      &::before {
+        right: 0;
+      }
+    }
+
+    .slick-prev {
+      left: -10px;
+
+      &::before {
+        left: 0;
+      }
     }
   }
 }

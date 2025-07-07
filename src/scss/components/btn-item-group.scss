@@ -4,7 +4,7 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 
   &__like {
     display: flex;
@@ -30,12 +30,23 @@
 
   &__compare {
     cursor: pointer;
+    display: flex;
 
     svg {
       color: var(--card-collor-hover);
       transition: color 0.4s ease-in-out;
     }
+    &:focus-visible,&:hover,&:active {
+      svg {
+        color: var(--link-catalog-hover);
+      }
+    }
 
+    &-input {
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+    }
     &-input:checked {
       &+svg {
         color: var(--link-catalog-hover);

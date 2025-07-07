@@ -17,7 +17,7 @@
     <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
     <!--<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;900&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">-->
 
-    
+
 
     <!--<link href="css/_cdn/styles.css" rel="stylesheet">-->
     <link href="css/styles.css" rel="stylesheet">
@@ -25,13 +25,19 @@
     <link href="css/catalog_style.css" rel="stylesheet">
 
     <link href="css/style.min.css" rel="stylesheet">
-    
+
 
     <!--<link href="css/lk_manager_styles.css" rel="stylesheet">-->
     <!--<link href="css/_cdn/select2_checkbox.min.css" rel="stylesheet">-->
 
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MJ65H6JDZN"></script>
+    <script>
+        window.addEventListener('load', function () {
+            document.body.classList.remove('loading');
+            document.getElementById('preloader').style.display = 'none';
+        });
+    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -109,6 +115,9 @@
 </head>
 <body>
   <div class="wrapper">
+    <div id="preloader">
+  <div class="loader"></div>
+</div>
     <header class="header-alert">
   <div class="header-alert__line-top">
     <div class="container">
@@ -119,11 +128,11 @@
               <use xlink:href="img/sprite.svg#local"></use>
             </svg>
             <span>
+              <i>Мой город:</i>
               Москва
             </span>
           </a>
         </div>
-        <a href="mailto:sale@aks-sale.ru" class="hidden-link-mail">sale@aks-sale.ru</a>
         <!--<div class="header-alert__box-nav">
           <nav class="header-alert__nav">
             <ul class="header-alert__list">
@@ -146,6 +155,14 @@
           </nav>
         </div>-->
         <div class="header-alert__box-connect">
+          <a href="mailto:sale@aks-sale.ru" class="hidden-link-mail">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <use xlink:href="img/sprite.svg#mail"></use>
+            </svg>
+            <span>
+              sale@aks-sale.ru
+            </span>
+          </a>
           <a href="tel:+78003333394" class="header-alert__link phone">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <use xlink:href="img/sprite.svg#phone"></use>
@@ -154,7 +171,8 @@
               8 (800) 333-33-94
             </span>
           </a>
-          <div class="box-call">
+          <div class="header-alert__box-connect-left">
+            <div class="box-call">
   <button class="box-call__btn btn-reset">
     Перезвоните мне
   </button>
@@ -191,11 +209,12 @@
     </div>
   </div>
 </div>
-          <button class="burger" id="burger">
+            <button class="burger" id="burger">
   <span></span>
   <span></span>
   <span></span>
 </button>
+          </div>
         </div>
       </div>
     </div>
@@ -373,6 +392,47 @@
       <div class="box-hero__main-banner-slider">
         <div class="box-hero__slide">
           <div class="slide-content">
+            <a href="#" class="slide-content__link"></a>
+            <div class="slide-content__top-cintent">
+              <h3>
+                Для профессионалов и бизнеса
+              </h3>
+              <p>
+                Более 100 000 наименований для комплексного снабжения строительных объектов
+              </p>
+            </div>
+            <picture><source srcset="img/hero/1.webp" type="image/webp"><img class="slide-content__img" src="img/hero/1.jpg" alt="img"></picture>
+          </div>
+        </div>
+        <div class="box-hero__slide">
+          <div class="slide-content">
+            <a href="#" class="slide-content__link"></a>
+            <div class="slide-content__top-cintent">
+              <h3>
+                Трубы и фитинги по выгодным ценам
+              </h3>
+              <p>
+                Более 30 000 наименований со скидками до 60%
+              </p>
+              <!--<span>
+                <span class="marker">
+                  Скидка 15% за регистрацию
+                </span>
+              </span>-->
+            </div>
+          <!--
+            <div class="slide-content__bottom-content">
+              <a href="#" class="slide-content__link">
+                Создать аккаунт
+              </a>
+            </div>
+            -->
+            <picture><source srcset="img/hero/2.webp" type="image/webp"><img class="slide-content__img" src="img/hero/2.jpg" alt="img"></picture>
+          </div>
+        </div>
+        <div class="box-hero__slide">
+          <div class="slide-content">
+            <a href="#" class="slide-content__link"></a>
             <div class="slide-content__top-cintent">
               <h3>
                 Всегда широкий ассортимент
@@ -380,21 +440,12 @@
               <p>
                 Вся инженерная сантехника от бытовой до промышленной в наличии в нашем каталоге
               </p>
-              <span>
-                <span class="marker">
-                  Скидка 15% за регистрацию
-                </span>
-              </span>
-            </div>
-            <div class="slide-content__bottom-content">
-              <a href="#" class="slide-content__link">
-                Создать аккаунт
-              </a>
             </div>
             <picture><source srcset="img/hero/1.webp" type="image/webp"><img class="slide-content__img" src="img/hero/1.jpg" alt="img"></picture>
           </div>
         </div>
         <div class="box-hero__slide">
+          <a href="#" class="slide-content__link"></a>
           <div class="slide-content">
             <div class="slide-content__top-cintent">
               <h3>
@@ -403,21 +454,12 @@
               <p>
                 Вся инженерная сантехника от бытовой до промышленной в наличии в нашем каталоге
               </p>
-              <span>
-                <span class="marker">
-                  Скидка 15% за регистрацию
-                </span>
-              </span>
             </div>
-            <div class="slide-content__bottom-content">
-              <a href="#" class="slide-content__link">
-                Создать аккаунт
-              </a>
-            </div>
-            <picture><source srcset="img/hero/1.webp" type="image/webp"><img class="slide-content__img" src="img/hero/1.jpg" alt="img"></picture>
+            <picture><source srcset="img/hero/2.webp" type="image/webp"><img class="slide-content__img" src="img/hero/2.jpg" alt="img"></picture>
           </div>
         </div>
         <div class="box-hero__slide">
+          <a href="#" class="slide-content__link"></a>
           <div class="slide-content">
             <div class="slide-content__top-cintent">
               <h3>
@@ -426,68 +468,13 @@
               <p>
                 Вся инженерная сантехника от бытовой до промышленной в наличии в нашем каталоге
               </p>
-              <span>
-                <span class="marker">
-                  Скидка 15% за регистрацию
-                </span>
-              </span>
-            </div>
-            <div class="slide-content__bottom-content">
-              <a href="#" class="slide-content__link">
-                Создать аккаунт
-              </a>
-            </div>
-            <picture><source srcset="img/hero/1.webp" type="image/webp"><img class="slide-content__img" src="img/hero/1.jpg" alt="img"></picture>
-          </div>
-        </div>
-        <div class="box-hero__slide">
-          <div class="slide-content">
-            <div class="slide-content__top-cintent">
-              <h3>
-                Всегда широкий ассортимент
-              </h3>
-              <p>
-                Вся инженерная сантехника от бытовой до промышленной в наличии в нашем каталоге
-              </p>
-              <span>
-                <span class="marker">
-                  Скидка 15% за регистрацию
-                </span>
-              </span>
-            </div>
-            <div class="slide-content__bottom-content">
-              <a href="#" class="slide-content__link">
-                Создать аккаунт
-              </a>
-            </div>
-            <picture><source srcset="img/hero/1.webp" type="image/webp"><img class="slide-content__img" src="img/hero/1.jpg" alt="img"></picture>
-          </div>
-        </div>
-        <div class="box-hero__slide">
-          <div class="slide-content">
-            <div class="slide-content__top-cintent">
-              <h3>
-                Всегда широкий ассортимент
-              </h3>
-              <p>
-                Вся инженерная сантехника от бытовой до промышленной в наличии в нашем каталоге
-              </p>
-              <span>
-                <span class="marker">
-                  Скидка 15% за регистрацию
-                </span>
-              </span>
-            </div>
-            <div class="slide-content__bottom-content">
-              <a href="#" class="slide-content__link">
-                Создать аккаунт
-              </a>
             </div>
             <picture><source srcset="img/hero/1.webp" type="image/webp"><img class="slide-content__img" src="img/hero/1.jpg" alt="img"></picture>
           </div>
         </div>
       </div>
     </div>
+    <!--
     <div class="box-hero__card-line">
       <ul class="box-hero__list-info list-reset">
         <li>
@@ -522,6 +509,144 @@
         </li>
       </ul>
     </div>
+    -->
+  </div>
+</section>
+      <section class="box-popular my-section">
+  <div class="container">
+    <div class="box-popular__content">
+      <div class="box-popular__content-wrapper">
+        <ul class="box-popular__list">
+          <li>
+            <a href="#">
+              <span class="title">Трубы и фитинги</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/1.webp" type="image/webp"><img src="img/popular/1.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Котельное и отопительное оборудование</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/2.webp" type="image/webp"><img src="img/popular/2.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Запорно-регулирующая арматура</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/3.webp" type="image/webp"><img src="img/popular/3.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Газовое оборудование</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/4.webp" type="image/webp"><img src="img/popular/4.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Насосы и насосное оборудование</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/5.webp" type="image/webp"><img src="img/popular/5.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Утеплители (термоизоляция)</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/6.webp" type="image/webp"><img src="img/popular/6.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Пожарное оборудование</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/7.webp" type="image/webp"><img src="img/popular/7.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Измерительное оборудование (КИПиА)</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/8.webp" type="image/webp"><img src="img/popular/8.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Сантехника</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/9.webp" type="image/webp"><img src="img/popular/9.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Крепёжные системы</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/10.webp" type="image/webp"><img src="img/popular/10.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Баки и ёмкости</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/11.webp" type="image/webp"><img src="img/popular/11.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Уплотнительные материалы</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/12.webp" type="image/webp"><img src="img/popular/12.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Инструменты</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/13.webp" type="image/webp"><img src="img/popular/13.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Нержавеющий металлопрокат</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/14.webp" type="image/webp"><img src="img/popular/14.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Системы водоотвода</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/15.webp" type="image/webp"><img src="img/popular/15.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Вентиляция и кондициони- рование</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/16.webp" type="image/webp"><img src="img/popular/16.png" alt="img"></picture>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">Автомобильные зарядные станции</span>
+              <span class="number">29 987</span>
+              <picture><source srcset="img/popular/17.webp" type="image/webp"><img src="img/popular/17.png" alt="img"></picture>
+            </a>
+          </li>
+          <li class="link-catalog">
+            <a href="#">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <use xlink:href="img/sprite.svg#catalogBtn"></use>
+              </svg>
+              <span class="text">Весь каталог</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
       <section class="slider-five-card my-section">
@@ -540,18 +665,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -564,23 +689,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -590,7 +719,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -622,18 +751,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -646,23 +775,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -672,7 +805,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -704,18 +837,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -728,23 +861,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -754,7 +891,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -786,18 +923,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -810,23 +947,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -836,7 +977,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -868,18 +1009,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -892,23 +1033,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -918,7 +1063,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -950,18 +1095,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -974,23 +1119,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -1000,7 +1149,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -1032,18 +1181,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -1056,23 +1205,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -1082,7 +1235,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -1116,6 +1269,39 @@
         Гипермаркет для профессионалов и бизнеса
       </h2>
       <div class="box-link-tiles__wrapper">
+        <ul class="box-link-tiles__list">
+          <li>
+            <div class="card-hypermarket">
+  <img src="img/box-link-tiles/1.svg" alt="svg">
+  <p>Оптовая система скидок</p>
+</div>
+          </li>
+          <li>
+            <div class="card-hypermarket">
+  <img src="img/box-link-tiles/2.svg" alt="svg">
+  <p>Возврат НДС</p>
+</div>
+          </li>
+          <li>
+            <div class="card-hypermarket">
+  <img src="img/box-link-tiles/3.svg" alt="svg">
+  <p>Отсрочка платежа</p>
+</div>
+          </li>
+          <li>
+            <div class="card-hypermarket">
+  <img src="img/box-link-tiles/4.svg" alt="svg">
+  <p>Персональный менеджер</p>
+</div>
+          </li>
+          <li>
+            <div class="card-hypermarket">
+  <img src="img/box-link-tiles/5.svg" alt="svg">
+  <p>ЭДО</p>
+</div>
+          </li>
+        </ul>
+        <!--
         <div class="box-link-tiles__left">
           <div class="card-left-tiles">
             <h3 class="card-left-tiles__title">
@@ -1145,6 +1331,8 @@
             </ul>
           </div>
         </div>
+        -->
+        <!--
         <div class="box-link-tiles__right">
           <a href="#">
             <span>Водоснабжение</span>
@@ -1187,7 +1375,268 @@
             <picture><source srcset="img/popular/1.webp" type="image/webp"><img src="img/popular/1.png" alt="img"></picture>
           </a>
         </div>
+        -->
       </div>
+    </div>
+  </div>
+</section>
+      <section class="box-product-collections my-section">
+  <div class="box-product-collections__wrapper">
+    <div class="container">
+      <div class="box-product-collections__content">
+        <h2 class="box-product-collections__title nev-section-title">
+          Подборки товаров
+        </h2>
+        <ul class="box-product-collections__main-list list-reset">
+          <li class="box-product-collections__main-item">
+            <h3>Многоквартирные дома</h3>
+            <ul class="list-category list-reset">
+              <li>
+                <a href="#">
+                  Вентиляция для многоквартирного дома
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Отопление для новостроек и ЖК
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="box-product-collections__main-item">
+            <h3>Промышленные объекты</h3>
+            <ul class="list-category list-reset">
+              <li>
+                <a href="#">
+                  Промышленная вентиляция для цехов
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Сантехника для производственных помещений
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="box-product-collections__main-item">
+            <h3>Коммерческая недвижимость</h3>
+            <ul class="list-category list-reset">
+              <li>
+                <a href="#">
+                  Инженерная сантехника для офисных зданий
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Отопление для бизнес-центров
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+      <section class="box-recommends my-section">
+  <div class="container">
+    <div class="box-recommends__top-line">
+      <div class="box-recommends__top-left">
+        <h2 class="box-recommends__title nev-section-title">
+          АКС Рекомендует
+        </h2>
+        <ul class="box-recommends__btn-group">
+          <li>
+            <a href="#">Блог</a>
+          </li>
+          <li>
+            <a href="#">Новости</a>
+          </li>
+          <li>
+            <a href="#">Обзоры</a>
+          </li>
+        </ul>
+      </div>
+      <div class="box-recommends__top-right">
+        <a href="#" class="link-all">
+          Смотреть все
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box-recommends__slider">
+      <div class="slider-six-card">
+  <div class="slider-six-card__slide">
+    <div class="card-recommends">
+  <a class="card-recommends__main-link" href="#"></a>
+  <div class="card-recommends__wrapper">
+    <div class="card-recommends__card-front">
+      <div class="card-recommends__top">
+        <span class="marker">Обзор</span>
+      </div>
+      <div class="card-recommends__group">
+        <h3>Характеристики электроинструмента.</h3>
+        <p>Справочник новичка</p>
+      </div>
+      <p class="card-recommends__time">
+        <time datetime="1 июля 2025">1 июля 2025</time>
+      </p>
+      <picture><source srcset="img/box-recommends/1.webp" type="image/webp"><img src="img/box-recommends/1.jpg" alt="Характеристики электроинструмента."></picture>
+    </div>
+    <div class="card-recommends__card-back">
+      <h3>Характеристики электроинструмента.</h3>
+      <p>dfgdfg sfgdrg sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg sfg</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="slider-six-card__slide">
+    <div class="card-recommends">
+  <a class="card-recommends__main-link" href="#"></a>
+  <div class="card-recommends__wrapper">
+    <div class="card-recommends__card-front">
+      <div class="card-recommends__top">
+        <span class="marker">Инструкция</span>
+      </div>
+      <div class="card-recommends__group">
+        <h3>Характеристики электроинструмента.</h3>
+        <p>Справочник новичка</p>
+      </div>
+      <p class="card-recommends__time">
+        <time datetime="1 июля 2025">1 июля 2025</time>
+      </p>
+      <picture><source srcset="img/box-recommends/2.webp" type="image/webp"><img src="img/box-recommends/2.jpg" alt="Характеристики электроинструмента."></picture>
+    </div>
+    <div class="card-recommends__card-back">
+      <h3>Характеристики электроинструмента.</h3>
+      <p>dfgdfg вапва ывпып укпкп укпкп укпку укпукп укпукп укпукп sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg sfg</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="slider-six-card__slide">
+    <div class="card-recommends">
+  <a class="card-recommends__main-link" href="#"></a>
+  <div class="card-recommends__wrapper">
+    <div class="card-recommends__card-front">
+      <div class="card-recommends__top">
+        <span class="marker">Обзор</span>
+      </div>
+      <div class="card-recommends__group">
+        <h3>Характеристики электроинструмента.</h3>
+        <p>Справочник новичка</p>
+      </div>
+      <p class="card-recommends__time">
+        <time datetime="1 июля 2025">1 июля 2025</time>
+      </p>
+      <picture><source srcset="img/box-recommends/3.webp" type="image/webp"><img src="img/box-recommends/3.jpg" alt="Характеристики электроинструмента."></picture>
+    </div>
+    <div class="card-recommends__card-back">
+      <h3>Характеристики электроинструмента.</h3>
+      <p>dfgdfg вапва ывпып укпкп укпкп укпку укпукп укпукп ывафыафа цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg sfg</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="slider-six-card__slide">
+    <div class="card-recommends">
+  <a class="card-recommends__main-link" href="#"></a>
+  <div class="card-recommends__wrapper">
+    <div class="card-recommends__card-front">
+      <div class="card-recommends__top">
+        <span class="marker">Обзор</span>
+      </div>
+      <div class="card-recommends__group">
+        <h3>Характеристики ывпывп ыуыпуцп фуауп электроинструмента.</h3>
+        <p>Справочник упупцупцупуццпцупцуп новичка</p>
+      </div>
+      <p class="card-recommends__time">
+        <time datetime="1 июля 2025">1 июля 2025</time>
+      </p>
+      <picture><source srcset="img/box-recommends/4.webp" type="image/webp"><img src="img/box-recommends/4.jpg" alt="Характеристики ывпывп ыуыпуцп фуауп электроинструмента."></picture>
+    </div>
+    <div class="card-recommends__card-back">
+      <h3>Характеристики ывпывп ыуыпуцп фуауп электроинструмента.</h3>
+      <p>dfgdfg вапва ывпып укпкп укпкп укпку укпукп укпукп ывафыафа цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg sfg</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="slider-six-card__slide">
+    <div class="card-recommends">
+  <a class="card-recommends__main-link" href="#"></a>
+  <div class="card-recommends__wrapper">
+    <div class="card-recommends__card-front">
+      <div class="card-recommends__top">
+        <span class="marker">Обзор</span>
+      </div>
+      <div class="card-recommends__group">
+        <h3>Характеристики.</h3>
+        <p>Справочник упупцупцупуццпцупцуп</p>
+      </div>
+      <p class="card-recommends__time">
+        <time datetime="30 августа 2025">30 августа 2025</time>
+      </p>
+      <picture><source srcset="img/box-recommends/5.webp" type="image/webp"><img src="img/box-recommends/5.jpg" alt="Характеристики."></picture>
+    </div>
+    <div class="card-recommends__card-back">
+      <h3>Характеристики.</h3>
+      <p>dfgdfg вапва ывпып укпкп укпкп укпку укпукп укпукп ывафыафа цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg sfg</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="slider-six-card__slide">
+    <div class="card-recommends">
+  <a class="card-recommends__main-link" href="#"></a>
+  <div class="card-recommends__wrapper">
+    <div class="card-recommends__card-front">
+      <div class="card-recommends__top">
+        <span class="marker">Обзор</span>
+      </div>
+      <div class="card-recommends__group">
+        <h3>Характеристики.</h3>
+        <p>Справочник упупцупцупуццпцупцуп</p>
+      </div>
+      <p class="card-recommends__time">
+        <time datetime="30 августа 2025">30 августа 2025</time>
+      </p>
+      <picture><source srcset="img/box-recommends/6.webp" type="image/webp"><img src="img/box-recommends/6.jpg" alt="Характеристики."></picture>
+    </div>
+    <div class="card-recommends__card-back">
+      <h3>Характеристики.</h3>
+      <p>dfgdfg вапва ывпып укпкп укпкп укпку укпукп укпукп ывафыафа цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg sfg</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="slider-six-card__slide">
+    <div class="card-recommends">
+  <a class="card-recommends__main-link" href="#"></a>
+  <div class="card-recommends__wrapper">
+    <div class="card-recommends__card-front">
+      <div class="card-recommends__top">
+        <span class="marker">Обзор</span>
+      </div>
+      <div class="card-recommends__group">
+        <h3>Характеристики.</h3>
+        <p>Справочник упупцупцупуццпцупцуп</p>
+      </div>
+      <p class="card-recommends__time">
+        <time datetime="30 августа 2025">30 августа 2025</time>
+      </p>
+      <picture><source srcset="img/box-recommends/5.webp" type="image/webp"><img src="img/box-recommends/5.jpg" alt="Характеристики."></picture>
+    </div>
+    <div class="card-recommends__card-back">
+      <h3>Характеристики.</h3>
+      <p>dfgdfg вапва ывпып укпкп укпкп укпку укпукп укпукп ывафыафа цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg  цуауауца цуауца sfgsfg sffdgdsg dfdgdfg fdgsfg dfgsfg dfdgdfg dsfdgsfg sfg</p>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
     </div>
   </div>
 </section>
@@ -1195,7 +1644,7 @@
   <div class="container">
     <div class="slider-five-card__content">
       <h2 class="slider-five-card nev-section-title">
-        Подборка с выгодными ценами
+        Выгодные цены
       </h2>
       <div class="slider-five-card__list">
         <div class="slider-five-card__slide">
@@ -1207,18 +1656,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -1231,23 +1680,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -1257,7 +1710,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -1289,18 +1742,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -1313,23 +1766,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -1339,7 +1796,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -1371,18 +1828,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -1395,23 +1852,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -1421,7 +1882,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -1453,18 +1914,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -1477,23 +1938,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -1503,7 +1968,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -1535,18 +2000,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -1559,23 +2024,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -1585,7 +2054,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -1617,18 +2086,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -1641,23 +2110,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -1667,7 +2140,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -1699,18 +2172,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -1723,23 +2196,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -1749,7 +2226,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -1776,831 +2253,76 @@
     </div>
   </div>
 </section>
-      <section class="box-popular my-section">
+      <section class="box-official-distributor my-section">
   <div class="container">
-    <div class="box-popular__content">
-      <h2 class="box-popular__title nev-section-title">
-        Популярные категории
+    <div class="box-official-distributor__content">
+      <h2 class="box-official-distributor__title nev-section-title">
+        Официальный дистрибьютор известных брендов с доставкой по России
       </h2>
-      <div class="box-popular__content-wrapper">
-        <ul class="box-popular__list">
-          <li>
-            <a href="#">
-              <span>Запорная арматура</span>
-              <picture><source srcset="img/popular/1.webp" type="image/webp"><img src="img/popular/1.png" alt="img"></picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Котельное и отопительное оборудование</span>
-              <picture><source srcset="img/popular/2.webp" type="image/webp"><img src="img/popular/2.png" alt="img"></picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Трубы и фитинги</span>
-              <picture><source srcset="img/popular/3.webp" type="image/webp"><img src="img/popular/3.png" alt="img"></picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Газовое оборудование</span>
-              <picture><source srcset="img/popular/4.webp" type="image/webp"><img src="img/popular/4.png" alt="img"></picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Насосы и насосное оборудование</span>
-              <picture><source srcset="img/popular/5.webp" type="image/webp"><img src="img/popular/5.png" alt="img"></picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Пожарное оборудование</span>
-              <picture><source srcset="img/popular/6.webp" type="image/webp"><img src="img/popular/6.png" alt="img"></picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Измерительное оборудование</span>
-              <picture><source srcset="img/popular/7.webp" type="image/webp"><img src="img/popular/7.png" alt="img"></picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Утеплители (термоизоляция)</span>
-              <picture><source srcset="img/popular/8.webp" type="image/webp"><img src="img/popular/8.png" alt="img"></picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Сантехника и бытовая химия</span>
-              <picture><source srcset="img/popular/9.webp" type="image/webp"><img src="img/popular/9.png" alt="img"></picture>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Баки и емкости</span>
-              <picture><source srcset="img/popular/10.webp" type="image/webp"><img src="img/popular/10.png" alt="img"></picture>
-            </a>
-          </li>
-          <li class="link-catalog">
-            <a href="#">
-              <span class="top-text">Смотреть весь каталог</span>
-              <span class="text">Более 1 000 единиц товара</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-      <section class="box-recommend my-section">
-  <div class="container">
-    <h2 class="box-recommend__title nev-section-title">
-      Мы рекомендуем
-    </h2>
-    <div class="box-recommend__box-list">
-      <ul class="box-recommend__list">
+      <ul class="box-official-distributor__list">
         <li>
-          <div class="card-product">
-  <div class="card-product__top">
-    <div class="box-img">
-      <a href="#" class="box-img__link">
-        <picture><source srcset="img/card-product/1.webp" type="image/webp"><img class="img" src="img/card-product/1.jpg" alt="img"></picture>
-      </a>
-      <div class="marker-group">
-        <span>Скидка</span>
-        <span>Новинка</span>
-        <span>Хит</span>
-      </div>
-      <div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>
-    </div>
-
-    <div class="card-product__wrapper-name">
-      <h3 class="card-product__title">
-        <a href="#">
-          "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
-        </a>
-      </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
-    </div>
-
-    <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
-    </div>
-
-  </div>
-  <div class="card-product__bottom">
-    <div class="left-info">
-      <p>Доставка 2-3 дня</p>
-      <div class="box-price-sale">
-        <span class="top-price">
-          <span class="discount">– 20%</span>
-          <span class="old">591 ₽</span>
-        </span>
-        <span class="price">
-          591 ₽
-        </span>
-      </div>
-    </div>
-    <div class="right-info">
-      <a href="#" class="link-basket">
-        <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
-            <use xlink:href="img/sprite.svg#linkBasket"></use>
-          </svg>
-        </span>
-        <span class="text">В корзину</span>
-      </a>
-    </div>
-    <!--<div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>-->
-  </div>
-</div>
+          <div class="card-official-distributor">
+            <div class="card-official-distributor__top">
+              <img src="img/box-official-distributor/1.svg" alt="svg">
+            </div>
+            <div class="card-official-distributor__bottom">
+              <p>Быстрое оформление заказа прямо на сайте</p>
+            </div>
+          </div>
         </li>
         <li>
-          <div class="card-product">
-  <div class="card-product__top">
-    <div class="box-img">
-      <a href="#" class="box-img__link">
-        <picture><source srcset="img/card-product/1.webp" type="image/webp"><img class="img" src="img/card-product/1.jpg" alt="img"></picture>
-      </a>
-      <div class="marker-group">
-        <span>Скидка</span>
-        <span>Новинка</span>
-        <span>Хит</span>
-      </div>
-      <div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>
-    </div>
-
-    <div class="card-product__wrapper-name">
-      <h3 class="card-product__title">
-        <a href="#">
-          "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
-        </a>
-      </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
-    </div>
-
-    <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
-    </div>
-
-  </div>
-  <div class="card-product__bottom">
-    <div class="left-info">
-      <p>Доставка 2-3 дня</p>
-      <div class="box-price-sale">
-        <span class="top-price">
-          <span class="discount">– 20%</span>
-          <span class="old">591 ₽</span>
-        </span>
-        <span class="price">
-          591 ₽
-        </span>
-      </div>
-    </div>
-    <div class="right-info">
-      <a href="#" class="link-basket">
-        <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
-            <use xlink:href="img/sprite.svg#linkBasket"></use>
-          </svg>
-        </span>
-        <span class="text">В корзину</span>
-      </a>
-    </div>
-    <!--<div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>-->
-  </div>
-</div>
+          <div class="card-official-distributor">
+            <div class="card-official-distributor__top">
+              <img src="img/box-official-distributor/2.svg" alt="svg">
+            </div>
+            <div class="card-official-distributor__bottom">
+              <p>Всегда актуальный и широкий ассортимент</p>
+            </div>
+          </div>
         </li>
         <li>
-          <div class="card-product">
-  <div class="card-product__top">
-    <div class="box-img">
-      <a href="#" class="box-img__link">
-        <picture><source srcset="img/card-product/1.webp" type="image/webp"><img class="img" src="img/card-product/1.jpg" alt="img"></picture>
-      </a>
-      <div class="marker-group">
-        <span>Скидка</span>
-        <span>Новинка</span>
-        <span>Хит</span>
-      </div>
-      <div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>
-    </div>
-
-    <div class="card-product__wrapper-name">
-      <h3 class="card-product__title">
-        <a href="#">
-          "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
-        </a>
-      </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
-    </div>
-
-    <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
-    </div>
-
-  </div>
-  <div class="card-product__bottom">
-    <div class="left-info">
-      <p>Доставка 2-3 дня</p>
-      <div class="box-price-sale">
-        <span class="top-price">
-          <span class="discount">– 20%</span>
-          <span class="old">591 ₽</span>
-        </span>
-        <span class="price">
-          591 ₽
-        </span>
-      </div>
-    </div>
-    <div class="right-info">
-      <a href="#" class="link-basket">
-        <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
-            <use xlink:href="img/sprite.svg#linkBasket"></use>
-          </svg>
-        </span>
-        <span class="text">В корзину</span>
-      </a>
-    </div>
-    <!--<div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>-->
-  </div>
-</div>
+          <div class="card-official-distributor">
+            <div class="card-official-distributor__top">
+              <img src="img/box-official-distributor/3.svg" alt="svg">
+            </div>
+            <div class="card-official-distributor__bottom">
+              <p>Скидки до 35% для участников клуба</p>
+            </div>
+          </div>
         </li>
         <li>
-          <div class="card-product">
-  <div class="card-product__top">
-    <div class="box-img">
-      <a href="#" class="box-img__link">
-        <picture><source srcset="img/card-product/1.webp" type="image/webp"><img class="img" src="img/card-product/1.jpg" alt="img"></picture>
-      </a>
-      <div class="marker-group">
-        <span>Скидка</span>
-        <span>Новинка</span>
-        <span>Хит</span>
-      </div>
-      <div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>
-    </div>
-
-    <div class="card-product__wrapper-name">
-      <h3 class="card-product__title">
-        <a href="#">
-          "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
-        </a>
-      </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
-    </div>
-
-    <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
-    </div>
-
-  </div>
-  <div class="card-product__bottom">
-    <div class="left-info">
-      <p>Доставка 2-3 дня</p>
-      <div class="box-price-sale">
-        <span class="top-price">
-          <span class="discount">– 20%</span>
-          <span class="old">591 ₽</span>
-        </span>
-        <span class="price">
-          591 ₽
-        </span>
-      </div>
-    </div>
-    <div class="right-info">
-      <a href="#" class="link-basket">
-        <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
-            <use xlink:href="img/sprite.svg#linkBasket"></use>
-          </svg>
-        </span>
-        <span class="text">В корзину</span>
-      </a>
-    </div>
-    <!--<div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>-->
-  </div>
-</div>
+          <div class="card-official-distributor">
+            <div class="card-official-distributor__top">
+              <img src="img/box-official-distributor/4.svg" alt="svg">
+            </div>
+            <div class="card-official-distributor__bottom">
+              <p>Бесплатная доставка и самовывоз от 6 часов</p>
+            </div>
+          </div>
         </li>
         <li>
-          <div class="card-product">
-  <div class="card-product__top">
-    <div class="box-img">
-      <a href="#" class="box-img__link">
-        <picture><source srcset="img/card-product/1.webp" type="image/webp"><img class="img" src="img/card-product/1.jpg" alt="img"></picture>
-      </a>
-      <div class="marker-group">
-        <span>Скидка</span>
-        <span>Новинка</span>
-        <span>Хит</span>
-      </div>
-      <div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>
-    </div>
-
-    <div class="card-product__wrapper-name">
-      <h3 class="card-product__title">
-        <a href="#">
-          "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
-        </a>
-      </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
-    </div>
-
-    <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
-    </div>
-
-  </div>
-  <div class="card-product__bottom">
-    <div class="left-info">
-      <p>Доставка 2-3 дня</p>
-      <div class="box-price-sale">
-        <span class="top-price">
-          <span class="discount">– 20%</span>
-          <span class="old">591 ₽</span>
-        </span>
-        <span class="price">
-          591 ₽
-        </span>
-      </div>
-    </div>
-    <div class="right-info">
-      <a href="#" class="link-basket">
-        <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
-            <use xlink:href="img/sprite.svg#linkBasket"></use>
-          </svg>
-        </span>
-        <span class="text">В корзину</span>
-      </a>
-    </div>
-    <!--<div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>-->
-  </div>
-</div>
-        </li>
-        <li>
-          <div class="card-product">
-  <div class="card-product__top">
-    <div class="box-img">
-      <a href="#" class="box-img__link">
-        <picture><source srcset="img/card-product/1.webp" type="image/webp"><img class="img" src="img/card-product/1.jpg" alt="img"></picture>
-      </a>
-      <div class="marker-group">
-        <span>Скидка</span>
-        <span>Новинка</span>
-        <span>Хит</span>
-      </div>
-      <div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>
-    </div>
-
-    <div class="card-product__wrapper-name">
-      <h3 class="card-product__title">
-        <a href="#">
-          "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
-        </a>
-      </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
-    </div>
-
-    <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
-    </div>
-
-  </div>
-  <div class="card-product__bottom">
-    <div class="left-info">
-      <p>Доставка 2-3 дня</p>
-      <div class="box-price-sale">
-        <span class="top-price">
-          <span class="discount">– 20%</span>
-          <span class="old">591 ₽</span>
-        </span>
-        <span class="price">
-          591 ₽
-        </span>
-      </div>
-    </div>
-    <div class="right-info">
-      <a href="#" class="link-basket">
-        <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
-            <use xlink:href="img/sprite.svg#linkBasket"></use>
-          </svg>
-        </span>
-        <span class="text">В корзину</span>
-      </a>
-    </div>
-    <!--<div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>-->
-  </div>
-</div>
-        </li>
-        <li>
-          <div class="card-product">
-  <div class="card-product__top">
-    <div class="box-img">
-      <a href="#" class="box-img__link">
-        <picture><source srcset="img/card-product/1.webp" type="image/webp"><img class="img" src="img/card-product/1.jpg" alt="img"></picture>
-      </a>
-      <div class="marker-group">
-        <span>Скидка</span>
-        <span>Новинка</span>
-        <span>Хит</span>
-      </div>
-      <div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>
-    </div>
-
-    <div class="card-product__wrapper-name">
-      <h3 class="card-product__title">
-        <a href="#">
-          "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
-        </a>
-      </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
-    </div>
-
-    <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
-    </div>
-
-  </div>
-  <div class="card-product__bottom">
-    <div class="left-info">
-      <p>Доставка 2-3 дня</p>
-      <div class="box-price-sale">
-        <span class="top-price">
-          <span class="discount">– 20%</span>
-          <span class="old">591 ₽</span>
-        </span>
-        <span class="price">
-          591 ₽
-        </span>
-      </div>
-    </div>
-    <div class="right-info">
-      <a href="#" class="link-basket">
-        <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
-            <use xlink:href="img/sprite.svg#linkBasket"></use>
-          </svg>
-        </span>
-        <span class="text">В корзину</span>
-      </a>
-    </div>
-    <!--<div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>-->
-  </div>
-</div>
-        </li>
-        <li>
-          <div class="card-product">
-  <div class="card-product__top">
-    <div class="box-img">
-      <a href="#" class="box-img__link">
-        <picture><source srcset="img/card-product/1.webp" type="image/webp"><img class="img" src="img/card-product/1.jpg" alt="img"></picture>
-      </a>
-      <div class="marker-group">
-        <span>Скидка</span>
-        <span>Новинка</span>
-        <span>Хит</span>
-      </div>
-      <div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>
-    </div>
-
-    <div class="card-product__wrapper-name">
-      <h3 class="card-product__title">
-        <a href="#">
-          "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
-        </a>
-      </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
-    </div>
-
-    <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
-    </div>
-
-  </div>
-  <div class="card-product__bottom">
-    <div class="left-info">
-      <p>Доставка 2-3 дня</p>
-      <div class="box-price-sale">
-        <span class="top-price">
-          <span class="discount">– 20%</span>
-          <span class="old">591 ₽</span>
-        </span>
-        <span class="price">
-          591 ₽
-        </span>
-      </div>
-    </div>
-    <div class="right-info">
-      <a href="#" class="link-basket">
-        <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
-            <use xlink:href="img/sprite.svg#linkBasket"></use>
-          </svg>
-        </span>
-        <span class="text">В корзину</span>
-      </a>
-    </div>
-    <!--<div class="btn-item-group">
-        <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
-            <use xlink:href="img/sprite.svg#like"></use>
-          </svg>
-        </a>
-        <label class="btn-item-group__compare">
-          <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <use xlink:href="img/sprite.svg#compare"></use>
-          </svg>
-        </label>
-      </div>-->
-  </div>
-</div>
+          <div class="card-official-distributor">
+            <div class="card-official-distributor__top">
+              <img src="img/box-official-distributor/5.svg" alt="svg">
+            </div>
+            <div class="card-official-distributor__bottom">
+              <p>Доставка по всей России 7 дней в неделю</p>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
   </div>
 </section>
-      
-      <section class="box-manufacturers my-section">
+      <section class="slider-five-card my-section">
   <div class="container">
-    <h2 class="box-manufacturers__title nev-section-title">
-      Популярные производители
-    </h2>
-  </div>
-  <div class="slider-container">
-    <div class="box-manufacturers__slider">
-      <div class="box-manufacturers__slide">
-        <a href="#" class="box-manufacturers__slide-link">
-          <picture><source srcset="img/box-manufacturers/1.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/1.png" alt="img"></picture>
-        </a>
-      </div>
-      <div class="box-manufacturers__slide">
-        <a href="#" class="box-manufacturers__slide-link">
-          <picture><source srcset="img/box-manufacturers/2.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/2.png" alt="img"></picture>
-        </a>
-      </div>
-      <div class="box-manufacturers__slide">
-        <a href="#" class="box-manufacturers__slide-link">
-          <picture><source srcset="img/box-manufacturers/3.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/3.png" alt="img"></picture>
-        </a>
-      </div>
-      <div class="box-manufacturers__slide">
-        <a href="#" class="box-manufacturers__slide-link">
-          <picture><source srcset="img/box-manufacturers/4.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/4.png" alt="img"></picture>
-        </a>
-      </div>
-      <div class="box-manufacturers__slide">
-        <a href="#" class="box-manufacturers__slide-link">
-          <picture><source srcset="img/box-manufacturers/5.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/5.png" alt="img"></picture>
-        </a>
-      </div>
-      <div class="box-manufacturers__slide">
-        <a href="#" class="box-manufacturers__slide-link">
-          <picture><source srcset="img/box-manufacturers/6.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/6.png" alt="img"></picture>
-        </a>
-      </div>
-      <div class="box-manufacturers__slide">
-        <a href="#" class="box-manufacturers__slide-link">
-          <picture><source srcset="img/box-manufacturers/7.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/7.png" alt="img"></picture>
-        </a>
-      </div>
-      <div class="box-manufacturers__slide">
-        <a href="#" class="box-manufacturers__slide-link">
-          <picture><source srcset="img/box-manufacturers/7.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/7.png" alt="img"></picture>
-        </a>
-      </div>
-      <div class="box-manufacturers__slide">
-        <a href="#" class="box-manufacturers__slide-link">
-          <picture><source srcset="img/box-manufacturers/7.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/7.png" alt="img"></picture>
-        </a>
-      </div>
-      <div class="box-manufacturers__slide">
-        <a href="#" class="box-manufacturers__slide-link">
-          <picture><source srcset="img/box-manufacturers/7.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/7.png" alt="img"></picture>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-      <section class="box-offers my-section">
-  <div class="box-offers__wrapper">
-    <div class="container">
-      <div class="box-offers__content">
-        <div class="box-offers__content-wrapper">
-          <div class="box-offers__left">
-            <h2 class="box-offers__title nev-section-title">
-              Выгодные предложения
-            </h2>
-            <div class="box-offers__box-img">
-              <picture><source srcset="img/box-offers/1.webp" type="image/webp"><img src="img/box-offers/1.png" alt="img"></picture>
-            </div>
-          </div>
-          <div class="box-offers__right">
-            <div class="slider-items-cards">
-  <div class="slider-items-cards__item">
-    <div class="card-product">
+    <div class="slider-five-card__content">
+      <h2 class="slider-five-card nev-section-title">
+        Новинки и актуальные предложения
+      </h2>
+      <div class="slider-five-card__list">
+        <div class="slider-five-card__slide">
+          <div class="card-product">
   <div class="card-product__top">
     <div class="box-img">
       <a href="#" class="box-img__link">
@@ -2608,18 +2330,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -2632,23 +2354,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -2658,7 +2384,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -2680,9 +2406,9 @@
       </div>-->
   </div>
 </div>
-  </div>
-  <div class="slider-items-cards__item">
-    <div class="card-product">
+        </div>
+        <div class="slider-five-card__slide">
+          <div class="card-product">
   <div class="card-product__top">
     <div class="box-img">
       <a href="#" class="box-img__link">
@@ -2690,18 +2416,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -2714,23 +2440,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -2740,7 +2470,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -2762,9 +2492,9 @@
       </div>-->
   </div>
 </div>
-  </div>
-  <div class="slider-items-cards__item">
-    <div class="card-product">
+        </div>
+        <div class="slider-five-card__slide">
+          <div class="card-product">
   <div class="card-product__top">
     <div class="box-img">
       <a href="#" class="box-img__link">
@@ -2772,18 +2502,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -2796,23 +2526,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -2822,7 +2556,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -2844,9 +2578,9 @@
       </div>-->
   </div>
 </div>
-  </div>
-  <div class="slider-items-cards__item">
-    <div class="card-product">
+        </div>
+        <div class="slider-five-card__slide">
+          <div class="card-product">
   <div class="card-product__top">
     <div class="box-img">
       <a href="#" class="box-img__link">
@@ -2854,18 +2588,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -2878,23 +2612,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -2904,7 +2642,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -2926,9 +2664,9 @@
       </div>-->
   </div>
 </div>
-  </div>
-  <div class="slider-items-cards__item">
-    <div class="card-product">
+        </div>
+        <div class="slider-five-card__slide">
+          <div class="card-product">
   <div class="card-product__top">
     <div class="box-img">
       <a href="#" class="box-img__link">
@@ -2936,18 +2674,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -2960,23 +2698,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -2986,7 +2728,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -3008,20 +2750,260 @@
       </div>-->
   </div>
 </div>
+        </div>
+        <div class="slider-five-card__slide">
+          <div class="card-product">
+  <div class="card-product__top">
+    <div class="box-img">
+      <a href="#" class="box-img__link">
+        <picture><source srcset="img/card-product/1.webp" type="image/webp"><img class="img" src="img/card-product/1.jpg" alt="img"></picture>
+      </a>
+      <div class="marker-group">
+        <span>Скидка</span>
+        <span class="marker2">Новинка</span>
+        <span>Хит</span>
+      </div>
+      <div class="btn-item-group">
+        <a href="#" class="btn-item-group__like">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <use xlink:href="img/sprite.svg#like"></use>
+          </svg>
+        </a>
+        <label class="btn-item-group__compare">
+          <input class="btn-item-group__compare-input" type="checkbox">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <use xlink:href="img/sprite.svg#compare"></use>
+          </svg>
+        </label>
+      </div>
+    </div>
+
+    <div class="card-product__wrapper-name">
+      <h3 class="card-product__title">
+        <a href="#">
+          "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
+        </a>
+      </h3>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
+    </div>
+
+    <div class="card-product__wrapper-type">
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
+    </div>
+
+  </div>
+  <div class="card-product__bottom">
+    <div class="left-info">
+      <div class="box-price-sale">
+        <span class="top-price">
+          <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
+        </span>
+        <span class="price">
+          591 ₽
+        </span>
+      </div>
+    </div>
+    <div class="right-info">
+      <a href="#" class="link-basket">
+        <span class="svg">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <use xlink:href="img/sprite.svg#linkBasket"></use>
+          </svg>
+        </span>
+        <span class="text">В корзину</span>
+      </a>
+    </div>
+    <!--<div class="btn-item-group">
+        <a href="#" class="btn-item-group__like">
+          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+            <use xlink:href="img/sprite.svg#like"></use>
+          </svg>
+        </a>
+        <label class="btn-item-group__compare">
+          <input class="btn-item-group__compare-input" type="checkbox">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <use xlink:href="img/sprite.svg#compare"></use>
+          </svg>
+        </label>
+      </div>-->
   </div>
 </div>
-          </div>
+        </div>
+        <div class="slider-five-card__slide">
+          <div class="card-product">
+  <div class="card-product__top">
+    <div class="box-img">
+      <a href="#" class="box-img__link">
+        <picture><source srcset="img/card-product/1.webp" type="image/webp"><img class="img" src="img/card-product/1.jpg" alt="img"></picture>
+      </a>
+      <div class="marker-group">
+        <span>Скидка</span>
+        <span class="marker2">Новинка</span>
+        <span>Хит</span>
+      </div>
+      <div class="btn-item-group">
+        <a href="#" class="btn-item-group__like">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <use xlink:href="img/sprite.svg#like"></use>
+          </svg>
+        </a>
+        <label class="btn-item-group__compare">
+          <input class="btn-item-group__compare-input" type="checkbox">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <use xlink:href="img/sprite.svg#compare"></use>
+          </svg>
+        </label>
+      </div>
+    </div>
+
+    <div class="card-product__wrapper-name">
+      <h3 class="card-product__title">
+        <a href="#">
+          "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
+        </a>
+      </h3>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
+    </div>
+
+    <div class="card-product__wrapper-type">
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
+    </div>
+
+  </div>
+  <div class="card-product__bottom">
+    <div class="left-info">
+      <div class="box-price-sale">
+        <span class="top-price">
+          <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
+        </span>
+        <span class="price">
+          591 ₽
+        </span>
+      </div>
+    </div>
+    <div class="right-info">
+      <a href="#" class="link-basket">
+        <span class="svg">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <use xlink:href="img/sprite.svg#linkBasket"></use>
+          </svg>
+        </span>
+        <span class="text">В корзину</span>
+      </a>
+    </div>
+    <!--<div class="btn-item-group">
+        <a href="#" class="btn-item-group__like">
+          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+            <use xlink:href="img/sprite.svg#like"></use>
+          </svg>
+        </a>
+        <label class="btn-item-group__compare">
+          <input class="btn-item-group__compare-input" type="checkbox">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <use xlink:href="img/sprite.svg#compare"></use>
+          </svg>
+        </label>
+      </div>-->
+  </div>
+</div>
         </div>
       </div>
     </div>
   </div>
 </section>
+      
+      
+      
+      <section class="box-manufacturers my-section">
+  <div class="container">
+    <h2 class="box-manufacturers__title nev-section-title">
+      Более 500 проверенных брендов
+    </h2>
+  </div>
+  <!--<div class="slider-container">-->
+  <div class="container">
+    <div class="box-manufacturers__container">
+      <div class="box-manufacturers__slider">
+        <div class="box-manufacturers__slide">
+          <a href="#" class="box-manufacturers__slide-link">
+            <picture><source srcset="img/box-manufacturers/1.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/1.png" alt="img"></picture>
+          </a>
+        </div>
+        <div class="box-manufacturers__slide">
+          <a href="#" class="box-manufacturers__slide-link">
+            <picture><source srcset="img/box-manufacturers/2.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/2.png" alt="img"></picture>
+          </a>
+        </div>
+        <div class="box-manufacturers__slide">
+          <a href="#" class="box-manufacturers__slide-link">
+            <picture><source srcset="img/box-manufacturers/3.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/3.png" alt="img"></picture>
+          </a>
+        </div>
+        <div class="box-manufacturers__slide">
+          <a href="#" class="box-manufacturers__slide-link">
+            <picture><source srcset="img/box-manufacturers/4.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/4.png" alt="img"></picture>
+          </a>
+        </div>
+        <div class="box-manufacturers__slide">
+          <a href="#" class="box-manufacturers__slide-link">
+            <picture><source srcset="img/box-manufacturers/5.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/5.png" alt="img"></picture>
+          </a>
+        </div>
+        <div class="box-manufacturers__slide">
+          <a href="#" class="box-manufacturers__slide-link">
+            <picture><source srcset="img/box-manufacturers/6.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/6.png" alt="img"></picture>
+          </a>
+        </div>
+        <div class="box-manufacturers__slide">
+          <a href="#" class="box-manufacturers__slide-link">
+            <picture><source srcset="img/box-manufacturers/7.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/7.png" alt="img"></picture>
+          </a>
+        </div>
+        <div class="box-manufacturers__slide">
+          <a href="#" class="box-manufacturers__slide-link">
+            <picture><source srcset="img/box-manufacturers/7.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/7.png" alt="img"></picture>
+          </a>
+        </div>
+        <div class="box-manufacturers__slide">
+          <a href="#" class="box-manufacturers__slide-link">
+            <picture><source srcset="img/box-manufacturers/7.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/7.png" alt="img"></picture>
+          </a>
+        </div>
+        <div class="box-manufacturers__slide">
+          <a href="#" class="box-manufacturers__slide-link">
+            <picture><source srcset="img/box-manufacturers/7.webp" type="image/webp"><img class="box-manufacturers__slide-link-img" src="img/box-manufacturers/7.png" alt="img"></picture>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--</div>-->
+</section>
+      
       <section class="box-partner my-section">
   <div class="container">
     <div class="box-partner__content">
       <div class="box-partner__left">
         <div class="box-partner__left-top">
-          <h2 class="box-partner__title nev-section-title">
+          <h2 class="box-partner__title nev-section-title-big">
             8 000+ клиентов во всех регионах России
           </h2>
           <p class="box-partner__desc">
@@ -3104,7 +3086,7 @@
       <div class="box-made__content-wrapper">
         <div class="box-made__left">
           <div class="box-made__top-info">
-            <h2 class="box-made__title nev-section-title">
+            <h2 class="box-made__title nev-section-title-big">
               Сделано в России
             </h2>
             <p class="box-made__desc">
@@ -3128,18 +3110,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -3152,23 +3134,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -3178,7 +3164,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -3210,18 +3196,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -3234,23 +3220,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -3260,7 +3250,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -3292,18 +3282,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -3316,23 +3306,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -3342,7 +3336,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -3374,18 +3368,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -3398,23 +3392,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -3424,7 +3422,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -3456,18 +3454,18 @@
       </a>
       <div class="marker-group">
         <span>Скидка</span>
-        <span>Новинка</span>
+        <span class="marker2">Новинка</span>
         <span>Хит</span>
       </div>
       <div class="btn-item-group">
         <a href="#" class="btn-item-group__like">
-          <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#like"></use>
           </svg>
         </a>
         <label class="btn-item-group__compare">
           <input class="btn-item-group__compare-input" type="checkbox">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
             <use xlink:href="img/sprite.svg#compare"></use>
           </svg>
         </label>
@@ -3480,23 +3478,27 @@
           "УЖ" водозаборный фильтр со встроенным обратным клапан клапан клапан клапан клапан клапан клапан
         </a>
       </h3>
-      <p>Арт. <span>9807</span></p>
-      <p>В наличии <span>160</span> шт</p>
+      <p>Арт: <span>9807</span></p>
+      <p class="desc">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <use xlink:href="img/sprite.svg#ok"></use>
+        </svg>
+        В наличии <span>160</span> шт
+      </p>
     </div>
 
     <div class="card-product__wrapper-type">
-      <p>Бренд:<span>АДЛ</span></p>
-      <p>Тип:<span>L-образный</span></p>
+      <p>Управление:<span>Ручка с фиксацией</span></p>
+      <p>Бренд:<span>Ридан</span></p>
     </div>
 
   </div>
   <div class="card-product__bottom">
     <div class="left-info">
-      <p>Доставка 2-3 дня</p>
       <div class="box-price-sale">
         <span class="top-price">
-          <span class="discount">– 20%</span>
           <span class="old">591 ₽</span>
+          <span class="discount">– 20%</span>
         </span>
         <span class="price">
           591 ₽
@@ -3506,7 +3508,7 @@
     <div class="right-info">
       <a href="#" class="link-basket">
         <span class="svg">
-          <svg width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             <use xlink:href="img/sprite.svg#linkBasket"></use>
           </svg>
         </span>
@@ -3539,7 +3541,7 @@
   <div class="container">
     <div class="box-reviews__content">
       <div class="box-reviews__top-line">
-        <h2 class="box-reviews__title nev-section-title">
+        <h2 class="box-reviews__title nev-section-title-big">
           Что о нас пишут клиенты?
         </h2>
         <ul class="box-reviews__group-link">
@@ -3925,7 +3927,7 @@
   <div class="box-banner-counter__wpapper">
     <div class="container">
     <div class="box-banner-counter__content">
-      <h2 class="box-banner-counter__title nev-section-title">
+      <h2 class="box-banner-counter__title nev-section-title-big">
         Каждый день решаем сложные инженерные задачи
       </h2>
       <div class="box-banner-counter__box-desc">
@@ -3982,7 +3984,7 @@
   <div class="container">
     <div class="box-certificates__content">
       <div class="box-certificates__title-line">
-        <h2 class="box-certificates__title nev-section-title">
+        <h2 class="box-certificates__title nev-section-title-big">
           Статьи и обзоры
         </h2>
         <a href="#" class="box-news__link-all">
@@ -4056,7 +4058,7 @@
 </div>
             </li>
             <li>
-              <button type="submit" class="slide-content__link">Рассчитать заказ</button>
+              <button type="submit" class="box-payment-order__submit">Рассчитать заказ</button>
             </li>
           </ul>
         </form>
@@ -4072,7 +4074,7 @@
     <div class="box-question-answer__content">
       <div class="box-question-answer__wrapper">
         <div class="box-left">
-          <h2 class="box-question-answer__title nev-section-title">
+          <h2 class="box-question-answer__title nev-section-title-big">
             Вопрос-ответ
           </h2>
           <p class="box-left__desc">
@@ -4209,7 +4211,7 @@
   <div class="container">
     <div class="box-news__content">
       <div class="box-news__title-line">
-        <h2 class="box-news__title nev-section-title">
+        <h2 class="box-news__title nev-section-title-big">
           Статьи и обзоры
         </h2>
         <a href="#" class="box-news__link-all">
@@ -4352,35 +4354,35 @@
           <div class="box-right-1__bottom">
             <ul class="box-right-1__list-bottom">
               <li>
-                <a href="#" class="network-link">
+                <a href="#" class="network-link vk">
                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none">
                     <use xlink:href="img/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li>
-                <a href="#" class="network-link">
+                <a href="#" class="network-link tg">
                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none">
                     <use xlink:href="img/sprite.svg#tg"></use>
                   </svg>
                 </a>
               </li>
               <li>
-                <a href="#" class="network-link">
+                <a href="#" class="network-link wa">
                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none">
                     <use xlink:href="img/sprite.svg#wu"></use>
                   </svg>
                 </a>
               </li>
               <li>
-                <a href="#" class="network-link">
+                <a href="#" class="network-link yt">
                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none">
                     <use xlink:href="img/sprite.svg#ut"></use>
                   </svg>
                 </a>
               </li>
               <li>
-                <a href="#" class="network-link">
+                <a href="#" class="network-link dz">
                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none">
                     <use xlink:href="img/sprite.svg#dz"></use>
                   </svg>

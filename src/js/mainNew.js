@@ -72,7 +72,7 @@ if (document.querySelectorAll('.box-leave-review__form')) {
 
 if (document.querySelectorAll('.box-payment-order__form')) {
   document.querySelectorAll(".box-payment-order__form").forEach(form => {
-    setupFormValidation(form, ".slide-content__link");
+    setupFormValidation(form, ".box-payment-order__submit");
   });
 }
 
@@ -90,7 +90,7 @@ if (document.querySelectorAll('.box-become-partner__form')) {
 
 if (document.querySelector('.box-hero__main-banner-slider')) {
   $('.box-hero__main-banner-slider').slick({
-    dots: true,
+    dots: false,
     infinite: false,
     //speed: 500,
     //fade: true,
@@ -203,6 +203,44 @@ if (document.querySelectorAll('.slider-five-card__list')) {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2
+          }
+        },
+      ]
+    });
+  });
+}
+
+if (document.querySelectorAll('.slider-six-card')) {
+  document.querySelectorAll('.slider-six-card').forEach((slider) => {
+    $(slider).slick({
+      slidesToShow: 6,       // Показывать 6 слайдов одновременно
+      slidesToScroll: 1,     // Прокручивать по 1 слайдов
+      infinite: false,       // Бесконечная прокрутка отключена
+      dots: false,            // Показывать точки-индикаторы
+      arrows: true,          // Показывать стрелки навигации
+      responsive: [          // Адаптивные настройки
+        {
+          breakpoint: 1200,  // При ширине экрана меньше 1200px
+          settings: {
+            slidesToShow: 5,
+          }
+        },
+        {
+          breakpoint: 992,   // При ширине экрана меньше 992px
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 768,   // При ширине экрана меньше 768px
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 550,   // При ширине экрана меньше 768px
+          settings: {
+            slidesToShow: 2,
           }
         },
       ]

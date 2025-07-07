@@ -1,0 +1,17 @@
+.card-hypermarket {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  img {
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+  }
+  p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 179%;
+    color: rgba(0, 0, 0, 0.8);
+  }
+}

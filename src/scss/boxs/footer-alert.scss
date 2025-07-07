@@ -72,8 +72,22 @@
           min-width: 54px;
           height: 54px;
           border-radius: 100%;
-          background-color: rgba(255, 255, 255, 0.1);
           transition: background-color 0.4s ease-in-out;
+          &.vk {
+            background-color: #4772a1;
+          }
+          &.tg {
+            background-color: #0296dd;
+          }
+          &.wa {
+            background-color: #00a155;
+          }
+          &.yt {
+            background-color: #f70000;
+          }
+          &.dz {
+            background-color: #fff;
+          }
           &:focus,&:focus-visible {
             outline: none;
           }
@@ -138,6 +152,7 @@
       gap: 30px;
       &__top {
         .box-reviews__link {
+          border: none;
           background-color: rgba(255, 255, 255, 0.05);
           .box-top {
             .text {

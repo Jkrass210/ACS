@@ -1,12 +1,11 @@
 .slide-content {
   height: 100%;
   min-height: 200px;
-  padding: 30px 40px;
+  padding: 50px;
   position: relative;
   display: flex;
-  gap: 15px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   picture {
     position: absolute;
     inset: 0;
@@ -19,28 +18,34 @@
     height: 100%;
     object-fit: cover;
   }
+  &__link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
   &__top-cintent {
     position: relative;
     z-index: 1;
-    max-width: 270px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 9px;
     h3 {
       font-family: var(--font-family);
       font-weight: 700;
-      font-size: 20px;
-      line-height: 130%;
-      letter-spacing: -0.03em;
+      font-size: 26px;
+      line-height: 131%;
       color: var(--color-white);
     }
     p {
+      max-width: 230px;
       font-family: var(--font-family);
-      font-weight: 400;
-      font-size: 12px;
-      color: var(--color-white);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 136%;
+      color: rgba(255, 255, 255, 0.8);
     }
-    .marker {
+    /*.marker {
       padding: 5px 7px;
       border-radius: 9999px;
       display: inline-block;
@@ -51,9 +56,9 @@
       letter-spacing: -0.03em;
       background-color: var(--color-white);
       color: var(--link-catalog-hover);
-    }
+    }*/
   }
-  &__bottom-content {
+  /*&__bottom-content {
     position: relative;
     z-index: 1;
   }
@@ -72,17 +77,26 @@
     &:focus-visible,&:hover,&:active {
       background-color: var(--link-hover-color);
     }
-  }
+  }*/
 }
 
 @media (max-width: 825px) {
   .slide-content {
-    padding: 15px;
+    padding: 20px;
     &__top-cintent {
-      gap: 6px;
-      .marker {
-        font-size: 10px;
+      max-width: 250px;
+      gap: 8px;
+      h3 {
+        font-weight: 500;
+        font-size: 20px;
       }
+      p {
+        font-weight: 500;
+        font-size: 14px;
+      }
+      /*.marker {
+        font-size: 10px;
+      }*/
     }
   }
 }
@@ -90,7 +104,14 @@
 @media (max-width: 560px) {
   .slide-content {
     &__top-cintent {
-      max-width: 350px;
+      max-width: 200px;
+      gap: 2px;
+      h3 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 10px;
+      }
     }
   }
 }
