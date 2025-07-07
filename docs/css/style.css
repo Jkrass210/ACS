@@ -4955,6 +4955,31 @@ body {
   color: var(--black-color);
 }
 
+.min-preloader {
+  width: 100%;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+}
+
+.min-preloader .loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
 .footer-alert {
   padding-bottom: 64px;
   background-color: var(--color-link);
