@@ -2406,6 +2406,13 @@ body {
   }*/
 }
 
+.slider-three-card.slider-loading {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .slider-three-card .slick-track {
   gap: 0px !important;
 }

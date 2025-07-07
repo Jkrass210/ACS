@@ -1,4 +1,10 @@
 .slider-three-card {
+  &.slider-loading {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
   //padding-right: 12px;
 
   .slick-track {

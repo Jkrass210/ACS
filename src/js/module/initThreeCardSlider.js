@@ -110,7 +110,7 @@
   });
 }*/
 
-export function initThreeCardSlider() {
+/*export function initThreeCardSlider() {
   const sliders = $('.slider-three-card');
 
   if (!sliders.length) return;
@@ -153,14 +153,12 @@ export function initThreeCardSlider() {
               breakpoint: 825,
               settings: {
                 slidesToShow: isTwoCardSlider ? 1 : 2,
-                //arrows: window.innerWidth <= 825 ? false : true
               }
             },
             {
               breakpoint: 560,
               settings: {
                 slidesToShow: 1,
-                //arrows: false
               }
             }
           ]
@@ -200,5 +198,96 @@ export function initThreeCardSlider() {
 
   sliders.each(function() {
     observer.observe(this);
+  });
+}*/
+
+export function initThreeCardSlider() {
+  const sliders = $('.slider-three-card:not(.slick-initialized)'); // Только неинициализированные слайдеры
+
+  if (!sliders.length) return;
+
+  // Добавляем прелоадер ко всем слайдерам
+  sliders.each(function() {
+    const $slider = $(this);
+    $slider.addClass('slider-loading'); // Добавляем класс вместо inline-стилей
+    $slider.before('<div class="min-preloader"><div class="loader"></div></div>');
+  });
+
+  // Функция для определения текущего количества слайдов
+  const getCurrentSlidesToShow = (isTwoCardSlider) => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth <= 560) return 1;
+    if (windowWidth <= 825) return isTwoCardSlider ? 1 : 2;
+    return isTwoCardSlider ? 2 : 3;
+  };
+
+  // Создаем наблюдатель с rootMargin для предзагрузки
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const $slider = $(entry.target);
+        if ($slider.hasClass('slick-initialized')) {
+          observer.unobserve(entry.target);
+          return;
+        }
+
+        const $preloader = $slider.prev('.min-preloader');
+        const isTwoCardSlider = $slider.hasClass('slider-two-card');
+        
+        const settings = {
+          slidesToScroll: 1,
+          infinite: false,
+          arrows: true,
+          dots: false,
+          slidesToShow: getCurrentSlidesToShow(isTwoCardSlider),
+          responsive: [
+            {
+              breakpoint: 825,
+              settings: {
+                slidesToShow: isTwoCardSlider ? 1 : 2,
+                //arrows: window.innerWidth <= 825 ? false : true
+              }
+            },
+            {
+              breakpoint: 560,
+              settings: {
+                slidesToShow: 1,
+                //arrows: false
+              }
+            }
+          ]
+        };
+
+        // Однократная инициализация
+        $slider.one('init', function() {
+          $preloader.remove();
+          $slider.removeClass('slider-loading');
+        });
+
+        $slider.slick(settings);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '200px' // Начинаем загрузку заранее
+  });
+
+  sliders.each(function() {
+    observer.observe(this);
+  });
+
+  // Оптимизированный обработчик resize
+  let resizeTimeout;
+  $(window).on('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      $('.slider-three-card.slick-initialized').each(function() {
+        const $slider = $(this);
+        const isTwoCardSlider = $slider.hasClass('slider-two-card');
+        const newSlides = getCurrentSlidesToShow(isTwoCardSlider);
+        $slider.slick('slickSetOption', 'slidesToShow', newSlides, true);
+      });
+    }, 100);
   });
 }
